@@ -81,9 +81,18 @@ function CardUniversityBase(props: CardUniversityProps): React.JSX.Element {
   const displayCity = normalizeRomanianText(city);
   const displayFacultyCountLabel = facultyCountLabel ? normalizeRomanianText(facultyCountLabel) : undefined;
   const mediaOverlayColor = mediaTone === "olive" ? theme.colors.olive10 : theme.colors.accent10;
+  const accessibilityLabel = [
+    displayName,
+    isGrid ? undefined : `în ${displayCity}`,
+    displayFacultyCountLabel,
+    isFavorite ? "favorit" : undefined,
+  ]
+    .filter(Boolean)
+    .join(", ");
 
   return (
     <AnimatedCardPressable
+      accessibilityLabel={accessibilityLabel}
       accessibilityRole="button"
       feedback="card"
       onPress={onPress}

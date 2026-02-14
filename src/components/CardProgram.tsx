@@ -128,9 +128,20 @@ function CardProgramBase(props: CardProgramProps): React.JSX.Element {
   const displayCreditsLabel = creditsLabel ? normalizeRomanianText(creditsLabel) : undefined;
   const toneToken = TONE_MAP[tone];
   const iconName = resolveProgramIcon(icon, displayLevel);
+  const accessibilityLabel = [
+    displayName,
+    displayLevel,
+    isFavoriteRow ? undefined : `la ${displayUniversityName}`,
+    displayFacultyName,
+    displayDurationLabel,
+    isFavorite ? "favorit" : undefined,
+  ]
+    .filter(Boolean)
+    .join(", ");
 
   return (
     <AnimatedCardPressable
+      accessibilityLabel={accessibilityLabel}
       accessibilityRole="button"
       feedback="card"
       onPress={onPress}

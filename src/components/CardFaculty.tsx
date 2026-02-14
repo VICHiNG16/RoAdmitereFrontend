@@ -105,9 +105,21 @@ function CardFacultyBase(props: CardFacultyProps): React.JSX.Element {
   const displayProgramCountLabel = programCountLabel ? normalizeRomanianText(programCountLabel) : undefined;
   const iconPanelStyle = isGrid ? styles.iconPanelGrid : isDetail ? styles.iconPanelDetail : styles.iconPanelList;
   const contentStyle = isGrid ? styles.contentGrid : isDetail ? styles.contentDetail : styles.contentList;
+  const accessibilityLabel = isDetail
+    ? undefined
+    : [
+        displayName,
+        isGrid ? undefined : `la ${displayUniversityName}`,
+        displayDomain,
+        displayProgramCountLabel,
+        isFavorite ? "favorit" : undefined,
+      ]
+        .filter(Boolean)
+        .join(", ");
 
   return (
     <AnimatedCardPressable
+      accessibilityLabel={accessibilityLabel}
       accessibilityRole="button"
       feedback="card"
       onPress={onPress}

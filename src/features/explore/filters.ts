@@ -61,7 +61,7 @@ export function inferFacultyCityOptionId(faculty: Faculty): string {
   }
 
   const normalizedUniversityName = normalizeForSearch(faculty.universityName);
-  const universityNameCityTokens: Array<[needle: string, cityToken: string]> = [
+  const universityNameCityTokens: [needle: string, cityToken: string][] = [
     ["babes bolyai", "cluj-napoca"],
     ["cluj napoca", "cluj-napoca"],
     ["timisoara", "timisoara"],
