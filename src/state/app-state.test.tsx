@@ -77,7 +77,7 @@ describe("AppStateProvider", () => {
     const realCount = Number(getByTestId("universities-count").props.children);
 
     expect(getByTestId("data-source").props.children).toBe("real");
-    expect(mockCount).toBeGreaterThan(realCount);
+    expect(realCount).toBeGreaterThan(mockCount);
   });
 
   it("toggles favorites deterministically", () => {
