@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 3,
+      "faculties": 12,
+      "programs": 12,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "faculties": [
+    {
+      "id": "faculty-arte-si-design",
+      "name": "Arte și Design",
+      "universityName": "UNArte",
+      "domain": "Arte Vizuale",
+      "programCountLabel": "14 Programe",
+      "programCount": 14,
+      "icon": "palette",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        3
+      ]
+    },
+    {
+      "id": "faculty-drept",
+      "name": "Drept",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "3 programe",
+      "programCount": 3,
+      "icon": "",
+      "description": "Justiție și legislație modernă.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-biologie",
+      "name": "Facultatea de Biologie",
+      "universityName": "UniBuc",
+      "domain": "Științele Naturii",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        3
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-drept",
+      "name": "Facultatea de Drept",
+      "universityName": "UVT Timișoara",
+      "domain": "Științe Juridice",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        3,
+        12
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-istorie",
+      "name": "Facultatea de Istorie",
+      "universityName": "UBB Cluj",
+      "domain": "Științe Umaniste",
+      "programCountLabel": "12 Programe",
+      "programCount": 12,
+      "icon": "history_edu",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        3
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-matematica",
+      "name": "Facultatea de Matematică",
+      "universityName": "UBB Cluj",
+      "domain": "",
+      "programCountLabel": "",
+      "programCount": null,
+      "icon": "",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        12
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-matematica-si-informatica",
+      "name": "Facultatea de Matematică și Informatică",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "3 total",
+      "programCount": 3,
+      "icon": "",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Str. M. Kogălniceanu 1",
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-psihologie",
+      "name": "Facultatea de Psihologie",
+      "universityName": "UVT Timișoara",
+      "domain": "",
+      "programCountLabel": "",
+      "programCount": null,
+      "icon": "",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        12
+      ]
+    },
+    {
+      "id": "faculty-geografie",
+      "name": "Geografie",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "5 programe",
+      "programCount": 5,
+      "icon": "",
+      "description": "Studiul pământului și turism.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-litere",
+      "name": "Litere",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "12 programe",
+      "programCount": 12,
+      "icon": "",
+      "description": "Studiul limbilor, literaturii și culturii într-un cadru academic de prestigiu.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-matematica-si-informatica",
+      "name": "Matematică și Informatică",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "8 programe",
+      "programCount": 8,
+      "icon": "",
+      "description": "Inovație în cod și algoritmi.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-teatru-si-film",
+      "name": "Teatru și Film",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "4 programe",
+      "programCount": 4,
+      "icon": "",
+      "description": "Artă scenică și producție.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    }
+  ]
+}

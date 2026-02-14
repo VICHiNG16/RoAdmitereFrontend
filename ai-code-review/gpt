@@ -1,0 +1,205 @@
+I went through `ExploreTabScreen` (`index.tsx`) + `SegmentedTabs.tsx`. The two biggest “not smooth enough” culprits I see are:
+
+1. **The pill indicator animates `left` during swipe-preview** (layout property)
+2. **You mount/render the “incoming” page only when a swipe starts** (JS work right when the user begins the gesture)
+
+There are also a couple of logic/architecture things that can make the UI feel “off” (even if FPS is fine).
+
+---
+
+## 1) Make the pill glide smoother (stop animating `left`, use `transform`)
+
+Right now, during swipe preview you compute:
+
+```ts
+return { left: ..., width: pillWidth, opacity: 1 }
+```
+
+Animating `left` can be noticeably less smooth than animating a `transform` (especially with shadows).
+
+### What to change
+
+* Keep the indicator anchored (constant `left`)
+* Animate **`translateX`** instead of `left`
+
+**In `styles.pillIndicator`**
+
+* Keep `left: PILL_HORIZONTAL_PADDING` (static)
+* Don’t animate it
+
+**In `animatedIndicatorStyle`**
+Compute `translateX` as the *index offset* only:
+
+```ts
+const step = pillWidth + PILL_TAB_GAP;
+const fromX = swipePreview.fromIndex.value * step;
+const toX = swipePreview.toIndex.value * step;
+
+return {
+  transform: [{ translateX: fromX + (toX - fromX) * progress }],
+  width: pillWidth,
+  opacity: 1,
+};
+```
+
+And for the non-preview case:
+
+```ts
+return {
+  transform: [{ translateX: (indicatorLeft.value - PILL_HORIZONTAL_PADDING) }],
+  width: indicatorWidth.value,
+  opacity: indicatorWidth.value > 0 ? 1 : 0,
+};
+```
+
+### Extra: shadows hurt during motion
+
+Your indicator has `...shadows.card`. A moving view with shadow is often expensive. If you still see micro-stutter after switching to `transform`, try either:
+
+* reducing that shadow for the indicator, or
+* making the shadow static (shadow on the container, indicator without shadow)
+
+This one change alone usually makes the “glide” feel immediately nicer.
+
+---
+
+## 2) Remove the “first frame stutter” when swiping between tabs
+
+In `index.tsx`, when the swipe first decides `toIndex`, you do:
+
+```ts
+runOnJS(beginSwipeTransitionByIndex)(fromIndex, toIndex, direction);
+```
+
+That calls `setPagerTransition(...)`, which causes React to mount/render the incoming page *right as the gesture starts*.
+
+If your card lists are bigger than the mock data, this is exactly the kind of thing that feels like “it’s not smooth”.
+
+### Best fix (since you only have 3 tabs)
+
+**Mount all 3 pages all the time** and just translate them.
+No conditional “render incoming page only on swipe”.
+
+Conceptually:
+
+* Render `universities`, `faculties`, `programs` pages absolutely stacked
+* Each page position is `(pageIndex - activeIndex) * width + dragOffset`
+* Drag offset comes from the gesture (shared value)
+
+This makes swipe **fully UI-thread smooth** and avoids any JS re-render during the gesture.
+
+### Smaller fix (minimal refactor)
+
+Pre-render the adjacent page *before* the gesture starts, so swipe doesn’t cause a big mount at the first update:
+
+* When `activeTab` changes, compute `activeIndex±1` and keep that page mounted (opacity 0, pointerEvents none)
+* Then when swipe starts, you already have it ready
+
+---
+
+## 3) Your swipe “commit” logic can feel wrong (velocity sign)
+
+You currently commit if:
+
+```ts
+currentProgress >= threshold || Math.abs(velocityX) >= threshold
+```
+
+Because it uses `abs(velocityX)`, a fast flick **in the opposite direction** can still commit and feel janky/unpredictable.
+
+### Better
+
+Use the sign based on swipe direction:
+
+* If going **to the right tab** (your `direction = 1`, because translationX < 0), then velocity should be **negative** to commit.
+* If going **to the left tab** (`direction = -1`), velocity should be **positive**.
+
+Use `pagerDirection.value` inside `onEnd`:
+
+```ts
+const dir = pagerDirection.value; // -1 or 1
+const flingTowardsTarget =
+  dir === 1 ? velocityX < -SWIPE_COMMIT_VELOCITY_THRESHOLD : velocityX > SWIPE_COMMIT_VELOCITY_THRESHOLD;
+
+const shouldCommit =
+  currentProgress >= SWIPE_COMMIT_PROGRESS_THRESHOLD || flingTowardsTarget;
+```
+
+This tends to make swipes feel way more “honest”.
+
+---
+
+## 4) Tap transitions: header/search copy changes immediately (feels mismatched)
+
+In `startTapPagerTransition`, you do:
+
+```ts
+setPagerTransition({ from: activeTab, to: nextKey, direction });
+setActiveTab(nextKey);
+```
+
+So **subtitle + search placeholder + filter route** switch immediately, while the cards are still animating between tabs. That mismatch reads as “not smooth”.
+
+### Fix
+
+Keep `activeTab` as the “current displayed tab” until the animation finishes, then swap it at the end (same as your swipe flow).
+
+Pattern:
+
+* `setPagerTransition({from, to})`
+* animate pager
+* when finished: `setActiveTab(nextKey); setPagerTransition(null)`
+
+---
+
+## 5) I don’t see “filter animations” here — but I do see a filter-state bug risk
+
+In this file, there are **no explicit filter animations** (so if you dislike filter animations, they’re likely inside your filter modal screens/components).
+
+But I *do* see a likely correctness/perf issue:
+
+```ts
+const universityCityFilterIds = useMemo(
+  () => new Set(getAppliedFilterOptionIds(...)),
+  [getAppliedFilterOptionIds]
+);
+```
+
+If `getAppliedFilterOptionIds` is a stable function (common in Zustand-style stores), this memo **won’t recompute when filters change**. That can make filter application feel “laggy”, inconsistent, or force you into weird UI workarounds.
+
+### Safer approach
+
+Don’t memo on the function reference. Memo on the returned array/value:
+
+```ts
+const universityCityOptions = getAppliedFilterOptionIds("filter-universities", "cities");
+const universityCityFilterIds = useMemo(() => new Set(universityCityOptions), [universityCityOptions]);
+```
+
+Do that for all filter groups.
+
+---
+
+## 6) Small rendering wins that help smoothness as data grows
+
+These won’t fix the core “glide”, but they prevent future jank:
+
+* **Remove wrapper `<View>` around each card** unless you need it. You already use `gap` in `cardsColumn`, so the extra View just deepens the tree.
+* If lists can be long: switch to **FlashList/FlatList** (virtualization).
+* Your `renderCardsForTab` creates new inline handlers per item (`onPress={() => ...}`), which blocks memoization of card rows. With a virtualized list, use `renderItem` + `useCallback`.
+
+---
+
+## The “do these first” order
+
+If you want the biggest feel improvement fastest:
+
+1. **SegmentedTabs indicator: switch `left` → `transform: translateX`** (and consider reducing the moving shadow)
+2. **Avoid mounting the incoming page at swipe start** (mount all 3 pages, or at least pre-mount adjacent)
+3. **Fix velocity sign for commit**
+4. **Delay `activeTab` swap until tap animation completes**
+5. **Fix filter memo dependencies** (correctness + prevents weird UX)
+
+---
+
+If you paste the file(s) that implement the filter modal UI (the part you “don’t like”), I can point to the exact animation code and suggest a nicer motion curve + timing that matches the tab/pager feel.

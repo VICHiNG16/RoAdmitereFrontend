@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="light" lang="ro"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Favoritele Mele - Programe (Muted Sand)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                    "terracotta": "#E07A5F",
+                    "terracotta-dark": "#C86045",
+                    "cream": "#FDFCF5",
+                    "olive": "#81B29A",
+                    "olive-dark": "#6B9680",
+                    "sand": "#F4F1DE",
+                    // Updated muted-sand to be warmer and closer to the header tone
+                    "muted-sand": "#EBE7D6", 
+                    "deep-blue": "#3D405B",
+                    "surface-card": "#FFFFFF",
+                    "tab-inactive": "#F0EFE9", 
+                    "tab-inactive-darker": "#E6E4DC"
+                },
+                fontFamily: {
+                    "display": ["Plus Jakarta Sans", "sans-serif"],
+                    "hand": ["Pacifico", "cursive"],
+                },
+                borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                boxShadow: {
+                    "soft": "0 10px 40px -10px rgba(0,0,0,0.05)",
+                    "card": "0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)",
+                    "sticker": "2px 4px 8px rgba(224, 122, 95, 0.3)",
+                    "tab": "0 -2px 6px rgba(0,0,0,0.03)"
+                }
+            },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .brush-stroke {
+            position: relative;
+        }
+        .brush-stroke::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: #E07A5F;
+            border-radius: 4px;
+            z-index: -1;
+            transform: skew(-10deg) rotate(-2deg);
+            opacity: 0.8;
+        }
+        .heart-bounce {
+             transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .heart-bounce:active {
+            transform: scale(0.85);
+        }.folder-tab {
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+            border-radius: 16px 16px 0 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-sand font-display text-deep-blue min-h-screen antialiased selection:bg-terracotta/20">
+<div class="mx-auto max-w-md min-h-screen flex flex-col relative overflow-hidden bg-sand">
+<div class="h-12 w-full flex items-end justify-between px-6 pb-2 z-20 text-deep-blue">
+<span class="text-xs font-bold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-[16px]">signal_cellular_alt</span>
+<span class="material-icons text-[16px]">wifi</span>
+<span class="material-icons text-[16px]">battery_full</span>
+</div>
+</div>
+<header class="px-5 pt-2 z-10 sticky top-0 bg-sand">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-baseline gap-2">
+<h1 class="text-3xl font-hand text-terracotta transform -rotate-1">Favorite</h1>
+<p class="text-sm text-deep-blue/60 font-medium">Colecția ta</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-white shadow-sm border border-stone-100 flex items-center justify-center relative">
+<span class="absolute top-2 right-2.5 h-2 w-2 bg-terracotta rounded-full border-2 border-white"></span>
+<span class="material-icons text-deep-blue/40 text-xl">notifications</span>
+</div>
+</div>
+<div class="flex items-end pl-1 relative z-10 w-full overflow-x-auto hide-scrollbar -mb-[1px]">
+<button class="relative z-10 pt-3 pb-3 px-6 bg-[#E6E4DC] rounded-t-2xl shadow-none text-deep-blue/40 font-bold text-base min-w-[110px] text-center hover:bg-gray-100 transition-colors">
+        Universități
+    </button>
+<button class="relative z-20 pt-3 pb-3 px-6 bg-gray-100 rounded-t-2xl -ml-4 text-deep-blue/40 font-bold text-base min-w-[110px] text-center hover:bg-gray-50 transition-colors">
+        Facultăți
+    </button>
+<button class="relative z-30 pt-3 pb-3 px-6 bg-muted-sand rounded-t-2xl -ml-4 shadow-tab text-terracotta font-bold text-base min-w-[120px] text-center border-t border-x border-muted-sand">
+        Programe
+    </button>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-muted-sand z-20"></div>
+</header>
+<main class="flex-1 px-5 pt-6 pb-28 overflow-y-auto hide-scrollbar bg-muted-sand rounded-t-[0px] min-h-[500px]">
+<div class="flex flex-col gap-4">
+<div class="group relative bg-surface-card rounded-3xl p-4 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-row items-center gap-4">
+<div class="w-16 h-16 shrink-0 bg-cream rounded-xl flex items-center justify-center p-2 border border-stone-50 relative overflow-hidden">
+<div class="absolute inset-0 bg-terracotta/5 rounded-xl"></div>
+<span class="material-symbols-outlined text-terracotta text-2xl">monitoring</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-olive/10 text-olive-dark text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Licență</span>
+<span class="text-deep-blue/40 text-[10px] font-bold">• 3 Ani</span>
+</div>
+<h2 class="text-base font-bold text-deep-blue leading-tight truncate">Informatică Economică</h2>
+<p class="text-xs text-deep-blue/60 mt-0.5 font-medium truncate">FSEGA • UBB Cluj-Napoca</p>
+</div>
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-2 backdrop-blur-sm shadow-sm border border-stone-100 shrink-0">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="group relative bg-surface-card rounded-3xl p-4 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-row items-center gap-4">
+<div class="w-16 h-16 shrink-0 bg-cream rounded-xl flex items-center justify-center p-2 border border-stone-50 relative overflow-hidden">
+<div class="absolute inset-0 bg-blue-50 rounded-xl"></div>
+<span class="material-symbols-outlined text-blue-400 text-2xl">code</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Licență</span>
+<span class="text-deep-blue/40 text-[10px] font-bold">• 3 Ani</span>
+</div>
+<h2 class="text-base font-bold text-deep-blue leading-tight truncate">Informatică</h2>
+<p class="text-xs text-deep-blue/60 mt-0.5 font-medium truncate">Matematică și Info • UniBuc</p>
+</div>
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-2 backdrop-blur-sm shadow-sm border border-stone-100 shrink-0">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="group relative bg-surface-card rounded-3xl p-4 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-row items-center gap-4">
+<div class="w-16 h-16 shrink-0 bg-cream rounded-xl flex items-center justify-center p-2 border border-stone-50 relative overflow-hidden">
+<div class="absolute inset-0 bg-purple-50 rounded-xl"></div>
+<span class="material-symbols-outlined text-purple-400 text-2xl">psychology</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-purple-50 text-purple-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Master</span>
+<span class="text-deep-blue/40 text-[10px] font-bold">• 2 Ani</span>
+</div>
+<h2 class="text-base font-bold text-deep-blue leading-tight truncate">Psihologie Clinică</h2>
+<p class="text-xs text-deep-blue/60 mt-0.5 font-medium truncate">Psihologie • UVT Timișoara</p>
+</div>
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-2 backdrop-blur-sm shadow-sm border border-stone-100 shrink-0">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="group relative bg-surface-card rounded-3xl p-4 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-row items-center gap-4">
+<div class="w-16 h-16 shrink-0 bg-cream rounded-xl flex items-center justify-center p-2 border border-stone-50 relative overflow-hidden">
+<div class="absolute inset-0 bg-orange-50 rounded-xl"></div>
+<span class="material-symbols-outlined text-orange-400 text-2xl">architecture</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-orange-50 text-orange-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Licență</span>
+<span class="text-deep-blue/40 text-[10px] font-bold">• 4 Ani</span>
+</div>
+<h2 class="text-base font-bold text-deep-blue leading-tight truncate">Arhitectură</h2>
+<p class="text-xs text-deep-blue/60 mt-0.5 font-medium truncate">Arhitectură • UAUIM</p>
+</div>
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-2 backdrop-blur-sm shadow-sm border border-stone-100 shrink-0">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="group relative bg-surface-card rounded-3xl p-4 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-row items-center gap-4">
+<div class="w-16 h-16 shrink-0 bg-cream rounded-xl flex items-center justify-center p-2 border border-stone-50 relative overflow-hidden">
+<div class="absolute inset-0 bg-emerald-50 rounded-xl"></div>
+<span class="material-symbols-outlined text-emerald-400 text-2xl">gavel</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Licență</span>
+<span class="text-deep-blue/40 text-[10px] font-bold">• 4 Ani</span>
+</div>
+<h2 class="text-base font-bold text-deep-blue leading-tight truncate">Drept</h2>
+<p class="text-xs text-deep-blue/60 mt-0.5 font-medium truncate">Drept • UAIC Iași</p>
+</div>
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-2 backdrop-blur-sm shadow-sm border border-stone-100 shrink-0">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="group relative border-2 border-dashed border-deep-blue/10 rounded-3xl p-4 flex flex-row items-center justify-center gap-3 hover:bg-deep-blue/5 transition-colors cursor-pointer min-h-[88px]">
+<div class="w-8 h-8 rounded-full bg-deep-blue/5 flex items-center justify-center">
+<span class="material-icons text-deep-blue/30 text-lg">add</span>
+</div>
+<span class="text-xs font-bold text-deep-blue/40 px-2">Descoperă alte programe</span>
+</div>
+</div>
+</main>
+<nav class="absolute bottom-0 w-full h-24 bg-white/90 backdrop-blur-xl border-t border-stone-100 flex items-start justify-around px-2 pt-4 z-30 rounded-t-[2rem] shadow-[0_-5px_20px_-5px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center gap-1.5 p-2 text-deep-blue/40 hover:text-deep-blue/70 transition-colors group w-1/2">
+<span class="material-icons text-2xl group-hover:-translate-y-1 transition-transform">explore</span>
+<span class="text-[11px] font-bold tracking-tight">Explorează</span>
+<span class="w-1 h-1 rounded-full bg-transparent mt-1 group-hover:bg-deep-blue/20"></span>
+</button>
+<button class="flex flex-col items-center gap-1.5 p-2 text-deep-blue group w-1/2">
+<span class="material-icons text-2xl group-hover:-translate-y-1 transition-transform text-terracotta">favorite</span>
+<span class="text-[11px] font-bold tracking-tight">Favorite</span>
+<span class="w-1 h-1 rounded-full bg-terracotta mt-1"></span>
+</button>
+</nav>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-deep-blue/10 rounded-full z-40"></div>
+</div>
+</body></html>

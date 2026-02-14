@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="light" lang="ro"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filtrează facultăți</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                    "terracotta": "#E07A5F",
+                    "terracotta-dark": "#C86045",
+                    "cream": "#FDFCF5",
+                    "olive": "#81B29A",
+                    "olive-dark": "#6B9680",
+                    "sand": "#F4F1DE",
+                    "deep-blue": "#3D405B",
+                    "surface-card": "#FFFFFF",
+                },
+                fontFamily: {
+                    "display": ["Plus Jakarta Sans", "sans-serif"],
+                    "hand": ["Pacifico", "cursive"],
+                },
+                borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                boxShadow: {
+                    "soft": "0 10px 40px -10px rgba(0,0,0,0.05)",
+                    "card": "0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)",
+                    "sticker": "2px 4px 8px rgba(224, 122, 95, 0.3)",
+                    "float": "0 10px 30px -5px rgba(61, 64, 91, 0.15)",
+                }
+            },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-sand font-display text-deep-blue min-h-screen antialiased selection:bg-terracotta/20">
+<div class="mx-auto max-w-md min-h-screen flex flex-col relative overflow-hidden bg-sand">
+<div class="h-12 w-full flex items-end justify-between px-6 pb-2 z-20 text-deep-blue">
+<span class="text-xs font-bold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-[16px]">signal_cellular_alt</span>
+<span class="material-icons text-[16px]">wifi</span>
+<span class="material-icons text-[16px]">battery_full</span>
+</div>
+</div>
+<header class="px-5 pt-4 pb-4 z-10 sticky top-0 bg-sand/95 backdrop-blur-sm flex items-center gap-4">
+<button class="h-10 w-10 rounded-full bg-white border border-stone-100 flex items-center justify-center hover:bg-stone-50 transition-colors shadow-sm active:scale-95 text-deep-blue">
+<span class="material-icons text-deep-blue/80">arrow_back</span>
+</button>
+<h1 class="text-2xl font-bold text-deep-blue">Filtrează facultăți</h1>
+</header>
+<main class="flex-1 px-5 pb-32 overflow-y-auto hide-scrollbar space-y-6">
+<section class="bg-surface-card rounded-3xl p-5 shadow-card border border-stone-100">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-8 h-8 rounded-full bg-terracotta/10 flex items-center justify-center text-terracotta">
+<span class="material-icons text-lg">location_on</span>
+</span>
+<h2 class="text-lg font-bold text-deep-blue">Caută oraș</h2>
+</div>
+<div class="relative mb-4">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-deep-blue/40 text-[20px]">search</span>
+</div>
+<input class="w-full bg-sand/50 border-none rounded-xl py-3 pl-10 pr-4 text-sm font-medium text-deep-blue placeholder-deep-blue/40 focus:ring-2 focus:ring-terracotta/20 focus:bg-white transition-all" placeholder="Caută un oraș..." type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center justify-between p-3 rounded-xl bg-terracotta/5 border border-terracotta/10 cursor-pointer group transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input checked="" class="peer appearance-none w-5 h-5 border-2 border-stone-300 rounded-md bg-white checked:bg-terracotta checked:border-terracotta focus:ring-0 cursor-pointer transition-colors" type="checkbox"/>
+<span class="material-icons absolute text-white text-[16px] pointer-events-none hidden peer-checked:block">check</span>
+</div>
+<span class="font-bold text-deep-blue">București</span>
+</div>
+<span class="px-2 py-1 rounded-lg bg-terracotta/10 text-terracotta text-xs font-bold">24</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl hover:bg-sand/30 cursor-pointer group transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer appearance-none w-5 h-5 border-2 border-stone-300 rounded-md bg-white checked:bg-terracotta checked:border-terracotta focus:ring-0 cursor-pointer transition-colors" type="checkbox"/>
+<span class="material-icons absolute text-white text-[16px] pointer-events-none hidden peer-checked:block">check</span>
+</div>
+<span class="font-bold text-deep-blue">Cluj-Napoca</span>
+</div>
+<span class="px-2 py-1 rounded-lg bg-sand text-deep-blue/60 text-xs font-bold">18</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl hover:bg-sand/30 cursor-pointer group transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer appearance-none w-5 h-5 border-2 border-stone-300 rounded-md bg-white checked:bg-terracotta checked:border-terracotta focus:ring-0 cursor-pointer transition-colors" type="checkbox"/>
+<span class="material-icons absolute text-white text-[16px] pointer-events-none hidden peer-checked:block">check</span>
+</div>
+<span class="font-bold text-deep-blue">Iași</span>
+</div>
+<span class="px-2 py-1 rounded-lg bg-sand text-deep-blue/60 text-xs font-bold">12</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl hover:bg-sand/30 cursor-pointer group transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer appearance-none w-5 h-5 border-2 border-stone-300 rounded-md bg-white checked:bg-terracotta checked:border-terracotta focus:ring-0 cursor-pointer transition-colors" type="checkbox"/>
+<span class="material-icons absolute text-white text-[16px] pointer-events-none hidden peer-checked:block">check</span>
+</div>
+<span class="font-bold text-deep-blue">Timișoara</span>
+</div>
+<span class="px-2 py-1 rounded-lg bg-sand text-deep-blue/60 text-xs font-bold">10</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl hover:bg-sand/30 cursor-pointer group transition-colors">
+<div class="flex items-center gap-3">
+<div class="relative w-6 h-6 flex items-center justify-center">
+<input class="peer appearance-none w-5 h-5 border-2 border-stone-300 rounded-md bg-white checked:bg-terracotta checked:border-terracotta focus:ring-0 cursor-pointer transition-colors" type="checkbox"/>
+<span class="material-icons absolute text-white text-[16px] pointer-events-none hidden peer-checked:block">check</span>
+</div>
+<span class="font-bold text-deep-blue">Brașov</span>
+</div>
+<span class="px-2 py-1 rounded-lg bg-sand text-deep-blue/60 text-xs font-bold">8</span>
+</label>
+</div>
+</section>
+<section class="bg-surface-card rounded-3xl p-5 shadow-card border border-stone-100">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-olive/10 flex items-center justify-center text-olive">
+<span class="material-icons text-lg">category</span>
+</span>
+<h2 class="text-lg font-bold text-deep-blue">Domenii</h2>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-olive"></span>
+<span class="w-2 h-2 rounded-full bg-gray-200"></span>
+<span class="w-2 h-2 rounded-full bg-gray-200"></span>
+</div>
+</div>
+<div class="overflow-x-auto hide-scrollbar pb-2 -mx-5 px-5">
+<div class="flex flex-col gap-3 min-w-max">
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                IT &amp; Calculatoare
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                Medicină
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-terracotta text-white font-medium text-sm shadow-sticker transition-all whitespace-nowrap active:scale-95">
+                Drept
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                Economie
+            </button>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                Arte
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                Inginerie
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                Litere
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-terracotta text-white font-medium text-sm shadow-sticker transition-all whitespace-nowrap active:scale-95">
+                Psihologie
+            </button>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+               Științe Politice
+            </button>
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                Jurnalism
+             </button>
+<button class="px-5 py-2.5 rounded-full bg-sand hover:bg-sand/80 text-deep-blue font-medium text-sm transition-all whitespace-nowrap active:scale-95">
+                Arhitectură
+             </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 w-full max-w-md bg-gradient-to-t from-sand via-sand/90 to-transparent pt-10 pb-8 px-5 z-20">
+<div class="flex items-center justify-between gap-4">
+<button class="text-sm font-bold text-deep-blue/50 hover:text-deep-blue transition-colors px-4 py-2">
+            Resetează
+        </button>
+<button class="flex-1 bg-terracotta text-white h-14 rounded-2xl font-bold text-lg shadow-sticker active:scale-95 transition-transform flex items-center justify-center gap-2">
+            Aplică Filtre
+            <span class="bg-white/20 px-2 py-0.5 rounded-lg text-sm">3</span>
+</button>
+</div>
+<div class="w-32 h-1 bg-deep-blue/10 rounded-full mx-auto mt-6"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="light" lang="ro"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Favoritele Mele (Folder Tabs)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                    "terracotta": "#E07A5F",
+                    "terracotta-dark": "#C86045",
+                    "terracotta-muted": "#F2DCCB", // Updated to a richer Soft Terracotta-Cream/Warm Sand
+                    "cream": "#FDFCF5",
+                    "olive": "#81B29A",
+                    "olive-muted": "#E9EFEC", 
+                    "olive-dark": "#6B9680",
+                    "sand": "#F4F1DE",
+                    "sand-muted": "#F2EFE9", 
+                    "deep-blue": "#3D405B",
+                    "surface-card": "#FFFFFF",
+                    "tab-inactive": "#F0EFE9", 
+                    "tab-inactive-darker": "#E6E4DC"
+                },
+                fontFamily: {
+                    "display": ["Plus Jakarta Sans", "sans-serif"],
+                    "hand": ["Pacifico", "cursive"],
+                },
+                borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                boxShadow: {
+                    "soft": "0 10px 40px -10px rgba(0,0,0,0.05)",
+                    "card": "0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)",
+                    "sticker": "2px 4px 8px rgba(224, 122, 95, 0.3)",
+                    "tab": "0 -2px 6px rgba(0,0,0,0.03)"
+                }
+            },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .brush-stroke {
+            position: relative;
+        }
+        .brush-stroke::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: #E07A5F;
+            border-radius: 4px;
+            z-index: -1;
+            transform: skew(-10deg) rotate(-2deg);
+            opacity: 0.8;
+        }
+        .heart-bounce {
+             transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .heart-bounce:active {
+            transform: scale(0.85);
+        }.folder-tab {
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+            border-radius: 16px 16px 0 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-sand font-display text-deep-blue min-h-screen antialiased selection:bg-terracotta/20">
+<div class="mx-auto max-w-md min-h-screen flex flex-col relative overflow-hidden bg-sand">
+<div class="h-12 w-full flex items-end justify-between px-6 pb-2 z-20 text-deep-blue">
+<span class="text-xs font-bold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-[16px]">signal_cellular_alt</span>
+<span class="material-icons text-[16px]">wifi</span>
+<span class="material-icons text-[16px]">battery_full</span>
+</div>
+</div>
+<header class="px-5 pt-2 z-10 sticky top-0 bg-sand">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-baseline gap-2">
+<h1 class="text-3xl font-hand text-terracotta transform -rotate-1">Favorite</h1>
+<p class="text-sm text-deep-blue/60 font-medium">Colecția ta</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-white shadow-sm border border-stone-100 flex items-center justify-center relative">
+<span class="absolute top-2 right-2.5 h-2 w-2 bg-terracotta rounded-full border-2 border-white"></span>
+<span class="material-icons text-deep-blue/40 text-xl">notifications</span>
+</div>
+</div>
+<div class="flex items-end pl-1 relative z-10 w-full overflow-x-auto hide-scrollbar -mb-[1px]">
+<button class="relative z-30 pt-3 pb-3 px-6 bg-terracotta-muted rounded-t-2xl shadow-tab text-terracotta font-bold text-base min-w-[120px] text-center border-t border-x border-terracotta-muted">
+        Universități
+    </button>
+<button class="relative z-20 pt-3 pb-3 px-6 bg-olive-muted/30 rounded-t-2xl -ml-4 text-deep-blue/40 font-bold text-base min-w-[110px] text-center hover:bg-olive-muted/50 transition-colors">
+        Facultăți
+    </button>
+<button class="relative z-10 pt-3 pb-3 px-6 bg-sand-muted/30 rounded-t-2xl -ml-4 text-deep-blue/40 font-bold text-base min-w-[110px] text-center hover:bg-sand-muted/50 transition-colors">
+        Programe
+    </button>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-terracotta-muted z-20"></div>
+</header>
+<main class="flex-1 px-5 pt-6 pb-28 overflow-y-auto hide-scrollbar bg-terracotta-muted rounded-t-[0px] min-h-[500px]">
+<div class="grid grid-cols-2 gap-4">
+<div class="group relative bg-[#FFFCF9] rounded-3xl p-3 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-col aspect-[4/5]">
+<div class="absolute top-3 right-3 z-10">
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-1.5 backdrop-blur-sm shadow-sm">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="w-full aspect-square bg-cream rounded-2xl flex items-center justify-center p-4 border border-stone-50 relative overflow-hidden mb-3">
+<div class="absolute inset-0 bg-terracotta/5 rounded-2xl"></div>
+<img alt="UBB Logo" class="w-3/4 h-3/4 object-contain relative z-10 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChT7bqptPwZh6KORlWxs-SNAJzmknkWUWfpwC1frzQ4NqiaWSFhnN5IuSflKyPPc_XmAAxMCPnpcozt747tAMclPg8z4esgKgDFNXfXv1z8lgaVB380XcqwehFwMUFWdz_V9qgn5vyLs12ETDt4ZrRABuyZ2XAGVXMfrpb8u35W8VFYK6x_u0D2u51yX4CJHcCyhA7OAOO4sDbDedNwzX9KkhtrRbB0lWMd1taJCNbnqPmtoADmGEMR5jCYojEB-rgeNyCh_5snwY"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<h2 class="text-sm font-bold text-deep-blue leading-tight line-clamp-2">Universitatea Babeș-Bolyai</h2>
+<div class="flex items-center gap-1 mt-2 text-deep-blue/50 text-[10px] font-bold uppercase tracking-wider">
+<span>Cluj-Napoca</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-[#FFFCF9] rounded-3xl p-3 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-col aspect-[4/5]">
+<div class="absolute top-3 right-3 z-10">
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-1.5 backdrop-blur-sm shadow-sm">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="w-full aspect-square bg-cream rounded-2xl flex items-center justify-center p-4 border border-stone-50 relative overflow-hidden mb-3">
+<div class="absolute inset-0 bg-olive/5 rounded-2xl"></div>
+<img alt="Unibuc Logo" class="w-3/4 h-3/4 object-contain relative z-10 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIJxtOagqPgO5yVx98F1sbiXDb98ug1IpAkaa4XHL1nnx3VcFUytiHKGCGX3W2skFXleg3w0nLrl2jBXTb-5ihVwZw3y_Gnws5gz_dWcn0urk_Ei0i1VZJ8wC1hSvBQSu77N6s6TqEUBqE2zZx91kTS1yKn1Mi9tVBiTKaGeTORojYY_wfObZoUv9Z2DhtP7uHh8OjnuMQLDY_5T-65BBiQjElSSGDqlkPJ7J-L5a98-kMMSUKbuHZ6RY8c_jLOU_-9qVqJeSws0U"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<h2 class="text-sm font-bold text-deep-blue leading-tight line-clamp-2">Universitatea din București</h2>
+<div class="flex items-center gap-1 mt-2 text-deep-blue/50 text-[10px] font-bold uppercase tracking-wider">
+<span>București</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-[#FFFCF9] rounded-3xl p-3 border border-stone-100 shadow-card hover:shadow-soft transition-all duration-300 flex flex-col aspect-[4/5]">
+<div class="absolute top-3 right-3 z-10">
+<button class="heart-bounce text-terracotta hover:text-terracotta-dark transition-colors bg-white/80 rounded-full p-1.5 backdrop-blur-sm shadow-sm">
+<span class="material-symbols-outlined text-[20px] fill-1 block" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">favorite</span>
+</button>
+</div>
+<div class="w-full aspect-square bg-cream rounded-2xl flex items-center justify-center p-4 border border-stone-50 relative overflow-hidden mb-3">
+<div class="absolute inset-0 bg-terracotta/5 rounded-2xl"></div>
+<img alt="UVT Logo" class="w-3/4 h-3/4 object-contain relative z-10 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-wem7QdNnnUUGHac-qC6YYg6sXl5278E-FfUxddyWMhMXElGi0QO79zU1-ajNaghwCeSq6MDZ-GOu0YShjFz4kUbBoRb3vxlrFpnAmqdItGU-PPUztVQaDBRw_mOF06lsQF5Ot0fVixWeA8QlZJCfIDhHN87OxihXSX3fGXjIIS247_PnUs_HK29o3EY9QwWbMHZEu1rrewosBW4CTs8Wzc3pYkJK5FNrAYagQJfA-G1ISIIUvpgbkm2RgdmbZ3bPGsoka6ssQbk"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<h2 class="text-sm font-bold text-deep-blue leading-tight line-clamp-2">Universitatea de Vest</h2>
+<div class="flex items-center gap-1 mt-2 text-deep-blue/50 text-[10px] font-bold uppercase tracking-wider">
+<span>Timișoara</span>
+</div>
+</div>
+</div>
+<div class="group relative border-2 border-dashed border-deep-blue/10 rounded-3xl p-3 flex flex-col items-center justify-center aspect-[4/5] hover:bg-deep-blue/5 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-deep-blue/5 flex items-center justify-center mb-2">
+<span class="material-icons text-deep-blue/30 text-xl">add</span>
+</div>
+<span class="text-xs font-bold text-deep-blue/40 text-center px-4">Descoperă mai multe</span>
+</div>
+</div>
+</main>
+<nav class="absolute bottom-0 w-full h-24 bg-white/90 backdrop-blur-xl border-t border-stone-100 flex items-start justify-around px-2 pt-4 z-30 rounded-t-[2rem] shadow-[0_-5px_20px_-5px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center gap-1.5 p-2 text-deep-blue/40 hover:text-deep-blue/70 transition-colors group w-1/2">
+<span class="material-icons text-2xl group-hover:-translate-y-1 transition-transform">explore</span>
+<span class="text-[11px] font-bold tracking-tight">Explorează</span>
+<span class="w-1 h-1 rounded-full bg-transparent mt-1 group-hover:bg-deep-blue/20"></span>
+</button>
+<button class="flex flex-col items-center gap-1.5 p-2 text-deep-blue group w-1/2">
+<span class="material-icons text-2xl group-hover:-translate-y-1 transition-transform text-terracotta">favorite</span>
+<span class="text-[11px] font-bold tracking-tight">Favorite</span>
+<span class="w-1 h-1 rounded-full bg-terracotta mt-1"></span>
+</button>
+</nav>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-deep-blue/10 rounded-full z-40"></div>
+</div>
+</body></html>

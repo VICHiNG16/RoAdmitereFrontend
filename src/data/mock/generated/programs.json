@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 3,
+      "faculties": 12,
+      "programs": 12,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "programs": [
+    {
+      "id": "program-arhitectura-uauim",
+      "name": "Arhitectură",
+      "level": "Licență",
+      "durationLabel": "• 4 Ani",
+      "durationYears": 4,
+      "studyMode": "",
+      "universityName": "UAUIM",
+      "facultyName": "Arhitectură",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-cibernetica-economica-ase-bucuresti",
+      "name": "Cibernetică Economică",
+      "level": "Licență",
+      "durationLabel": "3 Ani • Zi",
+      "durationYears": 3,
+      "studyMode": "Zi",
+      "universityName": "ASE București",
+      "facultyName": "CSIE",
+      "language": "",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": 9.45,
+      "descriptionParagraphs": [
+        "Programul de Cibernetică Economică pregătește specialiști capabili să modeleze procesele economice folosind instrumente matematice și tehnologii informatice moderne.",
+        "Vei învăța să analizezi date complexe, să dezvolți algoritmi de optimizare și să utilizezi software avansat pentru decizii de business."
+      ],
+      "careerOpportunities": [
+        "Analist de date",
+        "Data Scientist",
+        "Specialist IT",
+        "Consultant Business",
+        "Manager Proiect"
+      ],
+      "isFavorite": false,
+      "sourceScreens": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "program-drept-uaic-iasi",
+      "name": "Drept",
+      "level": "Licență",
+      "durationLabel": "• 4 Ani",
+      "durationYears": 4,
+      "studyMode": "",
+      "universityName": "UAIC Iași",
+      "facultyName": "Drept",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-drept-ubb-cluj",
+      "name": "Drept",
+      "level": "Licență",
+      "durationLabel": "4 Ani • Zi",
+      "durationYears": 4,
+      "studyMode": "Zi",
+      "universityName": "UBB Cluj",
+      "facultyName": "Facultatea de Drept",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        6
+      ]
+    },
+    {
+      "id": "program-informatica-economica-ubb-cluj-napoca",
+      "name": "Informatică Economică",
+      "level": "Licență",
+      "durationLabel": "• 3 Ani",
+      "durationYears": 3,
+      "studyMode": "",
+      "universityName": "UBB Cluj-Napoca",
+      "facultyName": "FSEGA",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-informatica-unibuc",
+      "name": "Informatică",
+      "level": "Licență",
+      "durationLabel": "• 3 Ani",
+      "durationYears": 3,
+      "studyMode": "",
+      "universityName": "UniBuc",
+      "facultyName": "Matematică și Info",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-informatica-universitatea-babes-bolyai",
+      "name": "Informatică",
+      "level": "Licență",
+      "durationLabel": "3 ani • Cu frecvență • Română/Engleză",
+      "durationYears": 3,
+      "studyMode": "IF",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "facultyName": "Facultatea de Matematică și Informatică",
+      "language": "Română/Engleză",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "program-informatica-uvt-timisoara",
+      "name": "Informatică",
+      "level": "Licență",
+      "durationLabel": "3 Ani • Zi",
+      "durationYears": 3,
+      "studyMode": "Zi",
+      "universityName": "UVT Timișoara",
+      "facultyName": "FMI",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        6
+      ]
+    },
+    {
+      "id": "program-matematica-aplicata-universitatea-babes-bolyai",
+      "name": "Matematică Aplicată",
+      "level": "Licență",
+      "durationLabel": "3 ani • Cu frecvență • Română",
+      "durationYears": 3,
+      "studyMode": "IF",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "facultyName": "Facultatea de Matematică și Informatică",
+      "language": "Română",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "program-matematica-universitatea-babes-bolyai",
+      "name": "Matematică",
+      "level": "Licență",
+      "durationLabel": "3 ani • Cu frecvență • Română",
+      "durationYears": 3,
+      "studyMode": "IF",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "facultyName": "Facultatea de Matematică și Informatică",
+      "language": "Română",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "program-psihologie-clinica-univ-din-bucuresti",
+      "name": "Psihologie Clinică",
+      "level": "Master",
+      "durationLabel": "2 Ani • Zi",
+      "durationYears": 2,
+      "studyMode": "Zi",
+      "universityName": "Univ. din București",
+      "facultyName": "Psihologie",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        6
+      ]
+    },
+    {
+      "id": "program-psihologie-clinica-uvt-timisoara",
+      "name": "Psihologie Clinică",
+      "level": "Master",
+      "durationLabel": "• 2 Ani",
+      "durationYears": 2,
+      "studyMode": "",
+      "universityName": "UVT Timișoara",
+      "facultyName": "Psihologie",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "RoAdmitereFrontend",
+    "slug": "roadmiterefrontend",
+    "scheme": "roadmitere",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "expo-router",
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FDFCF5"
+      }
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#F4F1DE",
+      "barStyle": "dark-content",
+      "translucent": false
+    }
+  }
+}

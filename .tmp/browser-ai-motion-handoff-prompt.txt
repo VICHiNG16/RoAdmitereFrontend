@@ -1,0 +1,152 @@
+﻿You are helping me as a React Native performance/motion specialist.
+
+Important: you are a browser-based AI. You do NOT have access to my PC/files/videos unless I paste them here.
+Work only from the context/snippets below and ask me for any missing file before suggesting risky changes.
+
+Goal:
+Make tab/subtab transitions feel cozy, premium, and smooth (not jittery, not repetitive bounce), while staying responsive.
+Also fix rough "back" feel from filter modals.
+Keep existing design language and API shape.
+
+Tech stack:
+- Expo Router + React Native + TypeScript
+- react-native-reanimated
+- react-native-gesture-handler
+
+Main affected files:
+- src/utils/tab-content-motion.ts
+- src/components/SegmentedTabs.tsx
+- src/utils/horizontal-tab-swipe.ts
+- app/(tabs)/explore/index.tsx
+- app/(tabs)/favorites/index.tsx
+- app/modals/filter-universities.tsx
+- app/modals/filter-faculties.tsx
+- app/modals/filter-programs.tsx
+- app/_layout.tsx
+- src/state/app-state.tsx
+
+Do NOT:
+- Rewrite component APIs or redesign UI.
+- Introduce unsupported Expo Router options.
+- Break reduced-motion behavior.
+- Replace architecture with a large rewrite unless absolutely necessary.
+
+Current important code context (already in project):
+
+1) useTabContentMotion currently uses timing with subtle opacity/scale settle:
+const PREMIUM_MIN_OPACITY = 0.92;
+const PREMIUM_MIN_SCALE = 0.992;
+const TRANSITION_LOCK_MS = 110;
+
+const transitionTo = useCallback((nextKey) => {
+  if (nextKey === activeKey) return;
+  const now = Date.now();
+  if (now < lockUntilRef.current) return;
+
+  onChangeActive(nextKey);
+
+  const baseDuration = getMotionDuration(reducedMotionEnabled, "normal");
+  const duration = Math.round(baseDuration * 1.1);
+  if (duration === 0) {
+    progress.value = 1;
+    return;
+  }
+
+  lockUntilRef.current = now + TRANSITION_LOCK_MS;
+  cancelAnimation(progress);
+  progress.value = 0;
+  const easing = getMotionEasing(reducedMotionEnabled, "standard");
+  progress.value = withTiming(1, { duration, easing });
+}, [...]);
+
+const contentAnimatedStyle = useAnimatedStyle(() => {
+  const opacityRange = 1 - minOpacity;
+  const scaleRange = 1 - settleScale;
+  return {
+    opacity: minOpacity + progress.value * opacityRange,
+    transform: [{ scale: settleScale + progress.value * scaleRange }],
+  };
+});
+
+2) SegmentedTabs API must be preserved:
+type SegmentedTabsProps = {
+  items: SegmentedTabItem[];
+  activeKey: string;
+  onChange: (key: string) => void;
+  variant?: SegmentedTabsVariant;
+  palette?: SegmentedTabsPalette;
+  folderWidthRatio?: number;
+  style?: StyleProp<ViewStyle>;
+};
+
+3) SegmentedTabs indicator currently glides with timing (no pulse):
+const indicatorLeft = useSharedValue(0);
+const indicatorWidth = useSharedValue(0);
+
+useEffect(() => {
+  const duration = Math.round(getMotionDuration(reducedMotionEnabled, "normal") * 1.1);
+  const easing = getMotionEasing(reducedMotionEnabled, "standard");
+  const hasMeasuredIndicator = indicatorWidth.value > 0;
+
+  if (duration === 0 || !hasMeasuredIndicator) {
+    indicatorLeft.value = indicatorMetrics.left;
+    indicatorWidth.value = indicatorMetrics.width;
+    return;
+  }
+
+  indicatorLeft.value = withTiming(indicatorMetrics.left, { duration, easing });
+  indicatorWidth.value = withTiming(indicatorMetrics.width, { duration, easing });
+}, [...]);
+
+4) Swipe gesture thresholds currently:
+const SWIPE_DISTANCE_THRESHOLD = 56;
+const SWIPE_VELOCITY_THRESHOLD = 900;
+const SWIPE_ACTIVATION_OFFSET = 18;
+const SWIPE_VERTICAL_FAIL_OFFSET = 14;
+
+5) Filter modals currently apply after close to avoid transition contention:
+useEffect(() => {
+  beginFilterDraft(FILTER_SCREEN_ID);
+}, [beginFilterDraft]);
+
+const handleApply = (): void => {
+  handleClose(); // router.back()
+  InteractionManager.runAfterInteractions(() => {
+    applyFilterDraft(FILTER_SCREEN_ID);
+  });
+};
+
+6) Stack modal config currently:
+<Stack
+  screenOptions={{
+    headerShown: false,
+    freezeOnBlur: true,
+    contentStyle: { backgroundColor: theme.colors.background },
+    statusBarStyle: "dark",
+    statusBarBackgroundColor: theme.colors.sand,
+    statusBarTranslucent: false,
+  }}
+>
+  <Stack.Screen name="modals/filter-universities" options={{ presentation: "modal", animation: "slide_from_bottom", gestureEnabled: true }} />
+  <Stack.Screen name="modals/filter-faculties" options={{ presentation: "modal", animation: "slide_from_bottom", gestureEnabled: true }} />
+  <Stack.Screen name="modals/filter-programs" options={{ presentation: "modal", animation: "slide_from_bottom", gestureEnabled: true }} />
+</Stack>
+
+Known symptom now:
+- Better than before, but still feels a bit stuttery/mechanical during repeated subtab switching.
+- Need smoother premium glide without losing responsiveness.
+- Back from menus should feel clean/intentional.
+
+Your task:
+1) Identify likely root causes from this context.
+2) Propose minimal safe code changes (not a rewrite).
+3) Provide exact unified diffs per file.
+4) Keep interactions responsive and reduce animation-thread/JS-thread contention.
+5) Keep behavior stable for both fast and deliberate taps/swipes.
+
+Output format:
+1. Root causes (prioritized)
+2. Diffs (unified patch blocks)
+3. Why each change improves feel
+4. Quick manual test checklist
+5. If still imperfect: next exact hotspots to edit

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phase 5 Parity Overlay</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f6f8fb;
+      color: #132132;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f6f8fb;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      align-items: end;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(10, 25, 47, 0.08);
+      padding: 12px;
+    }
+    label {
+      display: grid;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #3d4f66;
+    }
+    select, input[type="range"] {
+      min-width: 180px;
+    }
+    .meta {
+      font-size: 13px;
+      color: #415a77;
+    }
+    .canvas {
+      position: relative;
+      border-radius: 12px;
+      overflow: auto;
+      max-height: calc(100vh - 220px);
+      background: #0b1420;
+      box-shadow: 0 10px 32px rgba(15, 23, 42, 0.22);
+      padding: 12px;
+    }
+    .stack {
+      position: relative;
+      display: inline-block;
+      line-height: 0;
+    }
+    .stack img {
+      display: block;
+      max-width: min(100%, 460px);
+      height: auto;
+      border-radius: 10px;
+    }
+    #reference {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .compare figure {
+      margin: 0;
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px;
+      box-shadow: 0 4px 14px rgba(10, 25, 47, 0.08);
+    }
+    .compare figcaption {
+      font-size: 12px;
+      color: #3d4f66;
+      margin-top: 8px;
+    }
+    .compare img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    .empty {
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px dashed #c5d2e0;
+      color: #3d4f66;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Phase 5 Parity Overlay</h1>
+  <p class="meta">Reference sits above capture with an opacity slider for landmark alignment checks.</p>
+  <div id="app"></div>
+  <script>
+    const entries = [{"platform": "ios", "screenId": 1, "role": "explore-universities", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_1/screen.png", "capturePath": "captures/ios/01.png", "diffPath": "diffs/ios/01_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 2, "role": "university-detail", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_2/screen.png", "capturePath": "captures/ios/02.png", "diffPath": "diffs/ios/02_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 3, "role": "explore-faculties", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_3/screen.png", "capturePath": "captures/ios/03.png", "diffPath": "diffs/ios/03_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 4, "role": "faculty-detail", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_4/screen.png", "capturePath": "captures/ios/04.png", "diffPath": "diffs/ios/04_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 5, "role": "filter-faculties", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_5/screen.png", "capturePath": "captures/ios/05.png", "diffPath": "diffs/ios/05_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 6, "role": "explore-programs", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_6/screen.png", "capturePath": "captures/ios/06.png", "diffPath": "diffs/ios/06_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 7, "role": "program-detail", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_7/screen.png", "capturePath": "captures/ios/07.png", "diffPath": "diffs/ios/07_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 8, "role": "favorites-programs", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_8/screen.png", "capturePath": "captures/ios/08.png", "diffPath": "diffs/ios/08_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 9, "role": "favorites-universities", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_9/screen.png", "capturePath": "captures/ios/09.png", "diffPath": "diffs/ios/09_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 10, "role": "filter-universities", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_10/screen.png", "capturePath": "captures/ios/10.png", "diffPath": "diffs/ios/10_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 11, "role": "filter-programs", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_11/screen.png", "capturePath": "captures/ios/11.png", "diffPath": "diffs/ios/11_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 12, "role": "favorites-faculties", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_12/screen.png", "capturePath": "captures/ios/12.png", "diffPath": "diffs/ios/12_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "ios", "screenId": 13, "role": "favorites-empty", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_13/screen.png", "capturePath": "captures/ios/13.png", "diffPath": "diffs/ios/13_diff.png", "diffPercent": 0.0, "thresholdPercent": 2.0}, {"platform": "android", "screenId": 1, "role": "explore-universities", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_1/screen.png", "capturePath": "captures/android/01.png", "diffPath": "diffs/android/01_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 2, "role": "university-detail", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_2/screen.png", "capturePath": "captures/android/02.png", "diffPath": "diffs/android/02_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 3, "role": "explore-faculties", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_3/screen.png", "capturePath": "captures/android/03.png", "diffPath": "diffs/android/03_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 4, "role": "faculty-detail", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_4/screen.png", "capturePath": "captures/android/04.png", "diffPath": "diffs/android/04_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 5, "role": "filter-faculties", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_5/screen.png", "capturePath": "captures/android/05.png", "diffPath": "diffs/android/05_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 6, "role": "explore-programs", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_6/screen.png", "capturePath": "captures/android/06.png", "diffPath": "diffs/android/06_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 7, "role": "program-detail", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_7/screen.png", "capturePath": "captures/android/07.png", "diffPath": "diffs/android/07_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 8, "role": "favorites-programs", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_8/screen.png", "capturePath": "captures/android/08.png", "diffPath": "diffs/android/08_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 9, "role": "favorites-universities", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_9/screen.png", "capturePath": "captures/android/09.png", "diffPath": "diffs/android/09_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 10, "role": "filter-universities", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_10/screen.png", "capturePath": "captures/android/10.png", "diffPath": "diffs/android/10_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 11, "role": "filter-programs", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_11/screen.png", "capturePath": "captures/android/11.png", "diffPath": "diffs/android/11_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 12, "role": "favorites-faculties", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_12/screen.png", "capturePath": "captures/android/12.png", "diffPath": "diffs/android/12_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}, {"platform": "android", "screenId": 13, "role": "favorites-empty", "referencePath": "C:/Users/CALU/repos/antigravity/RoAdmitereFrontend/stitch_roadmitere/explorează_universități_13/screen.png", "capturePath": "captures/android/13.png", "diffPath": "diffs/android/13_diff.png", "diffPercent": 0.0, "thresholdPercent": 3.0}];
+    const app = document.getElementById("app");
+
+    if (!entries.length) {
+      app.innerHTML = '<div class="empty">No parity pairs found. Add screenshots under <code>.tmp/phase5/captures/ios</code> and <code>.tmp/phase5/captures/android</code>, then rerun <code>python scripts/run_phase5_qa.py</code>.</div>';
+    } else {
+      const platforms = [...new Set(entries.map((entry) => entry.platform))];
+      let selectedPlatform = platforms.includes("ios") ? "ios" : platforms[0];
+
+      const controls = document.createElement("div");
+      controls.className = "controls";
+      controls.innerHTML = `
+        <label>Platform
+          <select id="platformSelect"></select>
+        </label>
+        <label>Screen
+          <select id="screenSelect"></select>
+        </label>
+        <label>Reference opacity
+          <input id="opacitySlider" type="range" min="0" max="100" value="50" />
+        </label>
+        <div class="meta" id="meta"></div>
+      `;
+
+      const canvas = document.createElement("div");
+      canvas.className = "canvas";
+      canvas.innerHTML = `
+        <div class="stack">
+          <img id="capture" alt="RN capture" />
+          <img id="reference" alt="Stitch reference overlay" />
+        </div>
+      `;
+
+      const compare = document.createElement("div");
+      compare.className = "compare";
+      compare.innerHTML = `
+        <figure>
+          <img id="capturePreview" alt="Capture preview" />
+          <figcaption>RN capture</figcaption>
+        </figure>
+        <figure>
+          <img id="referencePreview" alt="Reference preview" />
+          <figcaption>Stitch reference</figcaption>
+        </figure>
+        <figure>
+          <img id="diffPreview" alt="Diff preview" />
+          <figcaption>Diff heatmap</figcaption>
+        </figure>
+      `;
+
+      app.appendChild(controls);
+      app.appendChild(canvas);
+      app.appendChild(compare);
+
+      const platformSelect = document.getElementById("platformSelect");
+      const screenSelect = document.getElementById("screenSelect");
+      const opacitySlider = document.getElementById("opacitySlider");
+      const meta = document.getElementById("meta");
+      const capture = document.getElementById("capture");
+      const reference = document.getElementById("reference");
+      const capturePreview = document.getElementById("capturePreview");
+      const referencePreview = document.getElementById("referencePreview");
+      const diffPreview = document.getElementById("diffPreview");
+
+      platformSelect.innerHTML = platforms.map((platform) => `<option value="${platform}">${platform}</option>`).join("");
+      platformSelect.value = selectedPlatform;
+
+      const updateScreenOptions = () => {
+        const platformEntries = entries.filter((entry) => entry.platform === selectedPlatform);
+        screenSelect.innerHTML = platformEntries
+          .map((entry) => `<option value="${entry.screenId}">${String(entry.screenId).padStart(2, "0")} - ${entry.role}</option>`)
+          .join("");
+        if (platformEntries.length > 0) {
+          screenSelect.value = String(platformEntries[0].screenId);
+        }
+      };
+
+      const render = () => {
+        const platformEntries = entries.filter((entry) => entry.platform === selectedPlatform);
+        const selected = platformEntries.find((entry) => String(entry.screenId) === String(screenSelect.value)) || platformEntries[0];
+        if (!selected) {
+          return;
+        }
+        const opacity = Number(opacitySlider.value) / 100;
+        capture.src = selected.capturePath;
+        reference.src = selected.referencePath;
+        capturePreview.src = selected.capturePath;
+        referencePreview.src = selected.referencePath;
+        diffPreview.src = selected.diffPath;
+        reference.style.opacity = opacity;
+        meta.textContent = `screen=${selected.screenId} role=${selected.role} diff=${selected.diffPercent.toFixed(2)}% threshold=${selected.thresholdPercent.toFixed(2)}% overlay=${opacitySlider.value}%`;
+      };
+
+      updateScreenOptions();
+      render();
+
+      platformSelect.addEventListener("change", () => {
+        selectedPlatform = platformSelect.value;
+        updateScreenOptions();
+        render();
+      });
+      screenSelect.addEventListener("change", render);
+      opacitySlider.addEventListener("input", render);
+    }
+  </script>
+</body>
+</html>

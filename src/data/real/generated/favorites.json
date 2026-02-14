@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "sourceRoot": "manual_scraping/merged/ase@custom_run_20260214T181911+ub@custom_run_20260214T114821+ugal@custom_run_20260214T190814+uoradea@custom_run_20260214T190904+upt@custom_run_20260214T201246+utcn@custom_run_20260214T201158+uvt@custom_run_20260214T201234",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 7,
+      "faculties": 102,
+      "programs": 1089,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "favorites": {
+    "collections": [
+      {
+        "kind": "universities",
+        "screenId": 9,
+        "tabs": [
+          "Universitati",
+          "Facultati",
+          "Programe"
+        ],
+        "activeTab": "Universitati",
+        "items": [],
+        "addCardLabel": "Descoperă mai multe"
+      },
+      {
+        "kind": "faculties",
+        "screenId": 12,
+        "tabs": [
+          "Universitati",
+          "Facultati",
+          "Programe"
+        ],
+        "activeTab": "Facultati",
+        "items": [],
+        "addCardLabel": "Descoperă mai multe"
+      },
+      {
+        "kind": "programs",
+        "screenId": 8,
+        "tabs": [
+          "Universitati",
+          "Facultati",
+          "Programe"
+        ],
+        "activeTab": "Programe",
+        "items": [],
+        "addCardLabel": "Descoperă alte programe"
+      }
+    ],
+    "emptyState": {
+      "screenId": 13,
+      "title": "Colecția ta este goală",
+      "description": "Începe să explorezi universitățile și facultățile din România și salvează-le pe cele care îți plac apăsând pe inimioară.",
+      "ctaLabel": "Explorează acum"
+    }
+  }
+}

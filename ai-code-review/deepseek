@@ -1,0 +1,97 @@
+After reviewing your code, I’ve identified several areas that could be causing the lack of smoothness in the tab transitions and overall feel. The main culprits are likely **unnecessary re-renders** during gestures and **non‑memoized card lists** that are rebuilt on every render. Below I’ll break down the issues and suggest concrete improvements.
+
+---
+
+## 1. **Card Lists Are Re‑created on Every Render**
+In `index.tsx`, the function `renderCardsForTab` is called inside the render method. Even though the filtered data (`filteredUniversities`, etc.) is memoized, the mapping to JSX happens **every time** the component re‑renders. During a swipe, `pagerTransition` changes, triggering a re‑render – and both the current and the next tab’s cards are rebuilt from scratch. This can cause frame drops if the lists are large or if the mapping is heavy.
+
+### ✅ Fix: Memoize the card lists per tab
+Create separate memoized values for each tab’s rendered cards:
+
+```tsx
+const universityCards = useMemo(() => {
+  return filteredUniversities.map((university, index) => (
+    <View key={university.id}>
+      <CardUniversity
+        // ... props
+      />
+    </View>
+  ));
+}, [filteredUniversities, isFavorite, toggleFavorite, router]);
+```
+
+Do the same for `facultyCards` and `programCards`. Then in the render you can simply use `{universityCards}` etc. This ensures the JSX is only rebuilt when the underlying data changes.
+
+---
+
+## 2. **`SegmentedTabs` Re‑renders and Indicator Animation**
+In `SegmentedTabs.tsx`, the `useEffect` that drives the pill indicator runs whenever `activeIndex` or `pillWidth` changes. That’s fine, but note that `pillWidth` is derived from `pillContainerWidth` (set on layout). The layout event only fires when the container’s width actually changes, so it’s not a hot path.
+
+However, the effect’s dependencies include `animateTransitions` and `reducedMotionEnabled`. When `motionSource` changes (e.g., from `"swipe"` to `"tap"`), `animateTransitions` flips and the effect runs again – potentially interrupting an ongoing animation. This is usually harmless, but ensure that `animateTransitions` doesn’t toggle unnecessarily. Currently it’s derived from `motionSource !== "swipe" && !reducedMotionEnabled`, which is stable.
+
+**One improvement**: In the effect, when `hasMeasuredIndicator` is false, we set the shared values directly without animation. That’s correct.
+
+---
+
+## 3. **Gesture Handling and State Updates**
+During a swipe, you update React state (`pagerTransition`) via `runOnJS` in `onUpdate` when the target index changes. This causes a re‑render while the gesture is active. Although the animated styles are driven by shared values (which run on the UI thread), the re‑render on the JS thread can still cause a visible hiccup if the JS thread is busy.
+
+### ✅ Alternative: Render Both Pages Conditionally Based on Shared Values
+Instead of conditionally rendering based on `pagerTransition`, you could **always render two pages** – the current tab and the next potential tab – and control their visibility/translation using shared values. This would eliminate the need for state updates during the gesture. For example:
+
+- Keep a shared value `nextTabIndex` that is updated in the gesture’s `onUpdate` (via `runOnJS` only when it changes, still needed but less frequent? Actually we can compute it directly in the worklet using `activeTabIndexValue` and the translation direction).
+- Then in the render, you can have:
+  ```tsx
+  <Animated.View style={[styles.cardsPage, outgoingStyle]}>
+    {renderCardsForTab(activeTab)}
+  </Animated.View>
+  <Animated.View style={[styles.cardsPage, incomingStyle]}>
+    {renderCardsForTab(nextTabKey)}
+  </Animated.View>
+  ```
+  where `nextTabKey` is derived from `nextTabIndex` (which would be a React state updated only when the target index actually changes, not on every frame). This still requires a state update, but it’s less frequent. However, to avoid state updates entirely, you could store the next tab’s data in a ref and render it unconditionally, but then you’d need to manage its content dynamically. Given the data size, the current approach might be acceptable if the card lists are memoized (fix #1).
+
+---
+
+## 4. **`trackTabHeight` Causes Re‑renders on Layout**
+The `trackTabHeight` function updates `tabHeights` state, which triggers a re‑render. This happens whenever a page’s layout changes (e.g., when content changes). This is normal and necessary for setting the `minHeight` of the viewport. However, if the heights change frequently (e.g., due to search filtering), it could cause extra renders. Ensure that the `tabHeights` object is only updated when the height actually changes (you already do a comparison with `current[tabKey] === roundedHeight`). That’s good.
+
+---
+
+## 5. **Potential Bottleneck: `isFavorite` and `toggleFavorite`**
+These functions come from `useAppState`. If they are not memoized or if they cause the whole app state to re‑evaluate on every change, it could lead to re‑renders. Make sure `useAppState` returns stable references (e.g., using `useCallback` for functions). The provided code doesn’t show the implementation, but it’s worth checking.
+
+---
+
+## 6. **Easing and Duration Tweaks**
+You use `getMotionEasing(reducedMotionEnabled, "enter")` for the indicator and tap transitions. The default easing might feel a bit slow or not “snappy” enough. You could experiment with a custom easing, e.g., `Easing.bezier(0.25, 0.1, 0.25, 1)` (standard) or a more playful one. For the swipe settle animation, you already use different easings based on commit/cancel – that’s good.
+
+The duration scaling for tap transitions (`TAP_DURATION_SCALE` and `TAP_DISTANCE_DURATION_SCALE`) might make long jumps feel sluggish. You could reduce the scale factors slightly.
+
+---
+
+## 7. **`SegmentedTabs` Pill Indicator During Swipe**
+The pill preview uses `pillSwipeFromIndexValue`, `pillSwipeToIndexValue`, and `progress`. That’s correct. However, note that when a swipe is in progress, the `useEffect` in `SegmentedTabs` does **not** run because `activeKey` hasn’t changed. The indicator position is driven entirely by the animated style’s swipe‑preview branch. That’s fine.
+
+But when the swipe commits, `activeKey` changes, the effect runs and starts a new `withTiming` from the current position (which is already at the target) to the same target. This may cause a tiny “blip” if the values are exactly equal. You could avoid that by checking if the new left/width are different from the current shared value before starting the animation.
+
+---
+
+## 8. **Miscellaneous**
+- In `SegmentedTabs`, the `pillIndicator` has `pointerEvents="none"` – good.
+- The folder variant uses `Animated.View` for the lift effect – that’s fine.
+- Ensure that all `useCallback` dependencies are correct to avoid stale closures. For example, `startTapPagerTransition` depends on `activeTab`, `cardsViewportWidth`, etc. – it’s correct.
+
+---
+
+## Summary of Recommended Changes
+1. **Memoize card lists** in `index.tsx` using `useMemo` for each tab.
+2. **Consider always rendering both pages** to avoid state updates during swipe (optional, but could improve smoothness).
+3. **Check that `isFavorite` and `toggleFavorite` are stable** (using `useCallback` in the state hook).
+4. **Tweak animation durations/easings** if the feel is still not right.
+5. **In `SegmentedTabs`, add a guard** in the indicator effect to avoid animating if the new values are equal to the current ones.
+6. **Profile with the React Native performance monitor** to see where frames are dropping. Look for excessive re‑renders or long JS threads.
+
+Implementing the first point alone should already make a noticeable difference, as it stops the card lists from being rebuilt on every swipe frame.
+
+If you need help with any specific part (e.g., implementing the memoization or the always‑visible pages approach), feel free to ask!

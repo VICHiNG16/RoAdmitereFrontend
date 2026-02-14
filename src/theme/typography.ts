@@ -1,0 +1,38 @@
+export const typography = {
+  family: {
+    regular: "PlusJakartaSans_400Regular",
+    medium: "PlusJakartaSans_500Medium",
+    semibold: "PlusJakartaSans_600SemiBold",
+    bold: "PlusJakartaSans_700Bold",
+    extraBold: "PlusJakartaSans_800ExtraBold",
+    hand: "Pacifico_400Regular",
+  },
+  size: {
+    xxs: 10,
+    xs: 11,
+    sm: 12,
+    md: 14,
+    lg: 16,
+    xl: 18,
+    xxl: 20,
+    display: 28,
+    hero: 32,
+  },
+  lineHeight: {
+    xxs: 12,
+    xs: 16,
+    sm: 18,
+    md: 20,
+    lg: 24,
+    xl: 26,
+    xxl: 28,
+    display: 34,
+    hero: 36,
+  },
+  letterSpacing: {
+    tight: -0.2,
+    normal: 0,
+    wide: 0.5,
+    wider: 0.8,
+  },
+} as const;

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "screenId asc"
+  },
+  "screens": [
+    {
+      "screenId": 1,
+      "role": "explore-universities",
+      "folder": "explorează_universități_1",
+      "title": "Explorează (Bento Style)",
+      "codePath": "stitch_roadmitere/explorează_universități_1/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_1/screen.png",
+      "htmlSha256": "bb7cc8be62115e1fd95f11d6caab9b3bc7d6db70f8322ba1a99cd6e7c9aed359"
+    },
+    {
+      "screenId": 2,
+      "role": "university-detail",
+      "folder": "explorează_universități_2",
+      "title": "Detalii Universitate (Foto & Grid)",
+      "codePath": "stitch_roadmitere/explorează_universități_2/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_2/screen.png",
+      "htmlSha256": "2e9a5af45b0c0eebabac6e7f4a5b8555e6bacaa5c89a62e14808963fee91f9f1"
+    },
+    {
+      "screenId": 3,
+      "role": "explore-faculties",
+      "folder": "explorează_universități_3",
+      "title": "Explorează Facultăți",
+      "codePath": "stitch_roadmitere/explorează_universități_3/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_3/screen.png",
+      "htmlSha256": "56a8203b75d7b63ad52403f42e54cfbe401c92dab1cb38e51ab4537fb104a594"
+    },
+    {
+      "screenId": 4,
+      "role": "faculty-detail",
+      "folder": "explorează_universități_4",
+      "title": "Detalii Facultate (Bento)",
+      "codePath": "stitch_roadmitere/explorează_universități_4/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_4/screen.png",
+      "htmlSha256": "b0fd7d9aef0090dc9d0f36ca148f848c1a2b0bcc425a9121d2f55941896110f0"
+    },
+    {
+      "screenId": 5,
+      "role": "filter-faculties",
+      "folder": "explorează_universități_5",
+      "title": "Filtrează facultăți",
+      "codePath": "stitch_roadmitere/explorează_universități_5/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_5/screen.png",
+      "htmlSha256": "2ddce0c9eb1bec7414d8e87d4d1a0c081dd892970510987c30135f386dfd4cc0"
+    },
+    {
+      "screenId": 6,
+      "role": "explore-programs",
+      "folder": "explorează_universități_6",
+      "title": "Explorează Programe de Studiu",
+      "codePath": "stitch_roadmitere/explorează_universități_6/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_6/screen.png",
+      "htmlSha256": "797a3dc6448c196755a4f12d1992efe5759faf41ed76e83c4f44bf4f93c33142"
+    },
+    {
+      "screenId": 7,
+      "role": "program-detail",
+      "folder": "explorează_universități_7",
+      "title": "Detalii Program Rafinate",
+      "codePath": "stitch_roadmitere/explorează_universități_7/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_7/screen.png",
+      "htmlSha256": "4eedca474741cd20169619a41d8e39c1aaafbd81931e361bafd14d311e43138f"
+    },
+    {
+      "screenId": 8,
+      "role": "favorites-programs",
+      "folder": "explorează_universități_8",
+      "title": "Favoritele Mele - Programe (Muted Sand)",
+      "codePath": "stitch_roadmitere/explorează_universități_8/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_8/screen.png",
+      "htmlSha256": "1de8c27d10211893a5cf18b17749527add833aaaedcd35a29665979db4407c4d"
+    },
+    {
+      "screenId": 9,
+      "role": "favorites-universities",
+      "folder": "explorează_universități_9",
+      "title": "Favoritele Mele (Folder Tabs)",
+      "codePath": "stitch_roadmitere/explorează_universități_9/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_9/screen.png",
+      "htmlSha256": "36295e8b075cde683f511c103f92925c3ad8d7ae556aeacb4bd461d6b324efaf"
+    },
+    {
+      "screenId": 10,
+      "role": "filter-universities",
+      "folder": "explorează_universități_10",
+      "title": "Filtrează universități",
+      "codePath": "stitch_roadmitere/explorează_universități_10/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_10/screen.png",
+      "htmlSha256": "cd21c58f9e2d5d5aa4fd6ce2c4fe26d2b9a1b4b0a453c6259600e4d878fcf03b"
+    },
+    {
+      "screenId": 11,
+      "role": "filter-programs",
+      "folder": "explorează_universități_11",
+      "title": "Filtrează programe",
+      "codePath": "stitch_roadmitere/explorează_universități_11/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_11/screen.png",
+      "htmlSha256": "05a713f6c702a2151b170228adbad1d2a97210bd34d0ac13b3d45981af79068d"
+    },
+    {
+      "screenId": 12,
+      "role": "favorites-faculties",
+      "folder": "explorează_universități_12",
+      "title": "Favorite: Facultăți",
+      "codePath": "stitch_roadmitere/explorează_universități_12/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_12/screen.png",
+      "htmlSha256": "7760691deba1b2ed4ba9cf6584185d810d9ded3eb8b50d881d94adfe430f324e"
+    },
+    {
+      "screenId": 13,
+      "role": "favorites-empty",
+      "folder": "explorează_universități_13",
+      "title": "Favorite - Colecție Goală",
+      "codePath": "stitch_roadmitere/explorează_universități_13/code.html",
+      "screenshotPath": "stitch_roadmitere/explorează_universități_13/screen.png",
+      "htmlSha256": "83d142c86e8e4210fca073aed72ee85a1ca40c7feac31da39623581069b322ca"
+    }
+  ]
+}

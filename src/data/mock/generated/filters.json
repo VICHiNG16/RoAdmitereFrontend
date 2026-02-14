@@ -1,0 +1,331 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 3,
+      "faculties": 12,
+      "programs": 12,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "filters": [
+    {
+      "id": "filter-faculties",
+      "screenId": 5,
+      "title": "Filtrează facultăți",
+      "sections": [
+        {
+          "id": "cities",
+          "label": "Caută oraș",
+          "options": [
+            {
+              "id": "option-bucuresti",
+              "label": "București",
+              "count": 24,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-cluj-napoca",
+              "label": "Cluj-Napoca",
+              "count": 18,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-iasi",
+              "label": "Iași",
+              "count": 12,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-timisoara",
+              "label": "Timișoara",
+              "count": 10,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-brasov",
+              "label": "Brașov",
+              "count": 8,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "domains",
+          "label": "Domenii",
+          "options": [
+            {
+              "id": "option-it-calculatoare",
+              "label": "IT & Calculatoare",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-medicina",
+              "label": "Medicină",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-drept",
+              "label": "Drept",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-economie",
+              "label": "Economie",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-arte",
+              "label": "Arte",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-inginerie",
+              "label": "Inginerie",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-litere",
+              "label": "Litere",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-psihologie",
+              "label": "Psihologie",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-stiinte-politice",
+              "label": "Științe Politice",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-jurnalism",
+              "label": "Jurnalism",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-arhitectura",
+              "label": "Arhitectură",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Resetează",
+        "applyLabel": "Aplică Filtre",
+        "selectedCount": 3
+      }
+    },
+    {
+      "id": "filter-universities",
+      "screenId": 10,
+      "title": "Filtrează universități",
+      "sections": [
+        {
+          "id": "cities",
+          "label": "Oraș",
+          "options": [
+            {
+              "id": "option-bucuresti",
+              "label": "București",
+              "count": 14,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-cluj-napoca",
+              "label": "Cluj-Napoca",
+              "count": 8,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-timisoara",
+              "label": "Timișoara",
+              "count": 5,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-iasi",
+              "label": "Iași",
+              "count": 6,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "university-types",
+          "label": "Tip Universitate",
+          "options": [
+            {
+              "id": "option-publica",
+              "label": "Publică",
+              "count": null,
+              "selected": false,
+              "description": "Buget & Taxă"
+            },
+            {
+              "id": "option-privata",
+              "label": "Privată",
+              "count": null,
+              "selected": true,
+              "description": "Taxă"
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Resetează",
+        "applyLabel": "Aplică Filtre",
+        "selectedCount": 3
+      }
+    },
+    {
+      "id": "filter-programs",
+      "screenId": 11,
+      "title": "Filtrează programe",
+      "sections": [
+        {
+          "id": "languages",
+          "label": "Limbă",
+          "options": [
+            {
+              "id": "option-romana",
+              "label": "Română",
+              "count": 124,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-engleza",
+              "label": "Engleză",
+              "count": 45,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-franceza",
+              "label": "Franceză",
+              "count": 12,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-germana",
+              "label": "Germană",
+              "count": 8,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "levels",
+          "label": "Nivel",
+          "options": [
+            {
+              "id": "option-licenta",
+              "label": "Licență",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-master",
+              "label": "Master",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "study-forms",
+          "label": "Formă învățământ",
+          "options": [
+            {
+              "id": "option-cu-frecventa-if",
+              "label": "Cu frecvență (IF)",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-la-distanta-id",
+              "label": "La distanță (ID)",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "durations",
+          "label": "Durată studii",
+          "options": [
+            {
+              "id": "option-3-ani",
+              "label": "3 Ani",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-4-ani",
+              "label": "4 Ani",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-6-ani",
+              "label": "6 Ani",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Resetează",
+        "applyLabel": "Aplică Filtre",
+        "selectedCount": 3
+      }
+    }
+  ]
+}

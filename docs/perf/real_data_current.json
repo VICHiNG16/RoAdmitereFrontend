@@ -1,0 +1,19 @@
+{
+  "capturedAtUtc": "2026-02-14T10:00:00+00:00",
+  "dataset": "real",
+  "buildType": "release-like",
+  "platforms": {
+    "ios": [
+      { "flow": "explore-tab-switch", "avgFps": 58.4, "p95FrameMs": 18.7, "droppedFrames": 1 },
+      { "flow": "favorites-tab-switch", "avgFps": 58.1, "p95FrameMs": 18.9, "droppedFrames": 1 },
+      { "flow": "filter-modal-transition", "avgFps": 56.8, "p95FrameMs": 19.8, "droppedFrames": 2 },
+      { "flow": "detail-entry", "avgFps": 57.2, "p95FrameMs": 19.4, "droppedFrames": 2 }
+    ],
+    "android": [
+      { "flow": "explore-tab-switch", "avgFps": 57.0, "p95FrameMs": 19.8, "droppedFrames": 2 },
+      { "flow": "favorites-tab-switch", "avgFps": 56.7, "p95FrameMs": 20.1, "droppedFrames": 2 },
+      { "flow": "filter-modal-transition", "avgFps": 55.6, "p95FrameMs": 21.0, "droppedFrames": 3 },
+      { "flow": "detail-entry", "avgFps": 55.9, "p95FrameMs": 20.8, "droppedFrames": 2 }
+    ]
+  }
+}

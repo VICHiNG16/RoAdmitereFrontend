@@ -1,0 +1,460 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 3,
+      "faculties": 12,
+      "programs": 12,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "screenCopy": [
+    {
+      "screenId": 1,
+      "title": "Explorează (Bento Style)",
+      "headings": [
+        "Bună!",
+        "Universitatea Babeș-Bolyai",
+        "Universitatea din București",
+        "Universitatea de Vest"
+      ],
+      "paragraphs": [
+        "Ce descoperim azi?"
+      ],
+      "inputPlaceholders": [
+        "Caută universități..."
+      ],
+      "buttonLabels": [
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "21 Facultăți",
+        "19 Facultăți",
+        "11 Facultăți",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "UBB Logo",
+        "Unibuc Logo",
+        "UVT Logo"
+      ]
+    },
+    {
+      "screenId": 2,
+      "title": "Detalii Universitate (Foto & Grid)",
+      "headings": [
+        "Universitatea Babeș-Bolyai",
+        "Facultăți",
+        "Matematică și Informatică",
+        "Drept",
+        "Geografie",
+        "Teatru și Film",
+        "Litere"
+      ],
+      "paragraphs": [
+        "Tradiție și excelență într-un mediu multicultural vibrant, chiar în inima Transilvaniei.",
+        "Inovație în cod și algoritmi.",
+        "Justiție și legislație modernă.",
+        "Studiul pământului și turism.",
+        "Artă scenică și producție.",
+        "Studiul limbilor, literaturii și culturii într-un cadru academic de prestigiu."
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Site oficial",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "21 total",
+        "8 programe",
+        "3 programe",
+        "5 programe",
+        "4 programe",
+        "12 programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "Universitatea Babes-Bolyai Main Building",
+        "UBB Logo"
+      ]
+    },
+    {
+      "screenId": 3,
+      "title": "Explorează Facultăți",
+      "headings": [
+        "Bună!",
+        "Facultatea de Istorie",
+        "Facultatea de Biologie",
+        "Facultatea de Drept",
+        "Arte și Design"
+      ],
+      "paragraphs": [
+        "Ce descoperim azi?"
+      ],
+      "inputPlaceholders": [
+        "Caută facultăți..."
+      ],
+      "buttonLabels": [
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Științe Umaniste",
+        "12 Programe",
+        "8 Programe",
+        "5 Programe",
+        "14 Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 4,
+      "title": "Detalii Facultate (Bento)",
+      "headings": [
+        "Facultatea de Matematică și Informatică",
+        "Programe de studiu",
+        "Informatică",
+        "Matematică",
+        "Matematică Aplicată"
+      ],
+      "paragraphs": [
+        "3 ani • Cu frecvență • Română/Engleză",
+        "3 ani • Cu frecvență • Română"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Site oficial",
+        "Licență",
+        "Master",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Cluj-Napoca, Str. M. Kogălniceanu 1",
+        "3 total",
+        "Licență",
+        "180 ECTS",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 5,
+      "title": "Filtrează facultăți",
+      "headings": [
+        "Filtrează facultăți",
+        "Caută oraș",
+        "Domenii"
+      ],
+      "paragraphs": [],
+      "inputPlaceholders": [
+        "Caută un oraș..."
+      ],
+      "buttonLabels": [
+        "IT & Calculatoare",
+        "Medicină",
+        "Drept",
+        "Economie",
+        "Arte",
+        "Inginerie",
+        "Litere",
+        "Psihologie",
+        "Științe Politice",
+        "Jurnalism",
+        "Arhitectură",
+        "Resetează",
+        "Aplică Filtre 3"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "24",
+        "18",
+        "12",
+        "10",
+        "8",
+        "3"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 6,
+      "title": "Explorează Programe de Studiu",
+      "headings": [
+        "Bună!",
+        "Cibernetică Economică",
+        "Drept",
+        "Psihologie Clinică",
+        "Informatică"
+      ],
+      "paragraphs": [
+        "Ce studiem azi?"
+      ],
+      "inputPlaceholders": [
+        "Caută programe..."
+      ],
+      "buttonLabels": [
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Licență",
+        "3 Ani • Zi",
+        "4 Ani • Zi",
+        "Facultatea de Drept",
+        "Master",
+        "2 Ani • Zi",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 7,
+      "title": "Detalii Program Rafinate",
+      "headings": [
+        "Cibernetică Economică",
+        "info Despre program",
+        "work Oportunități carieră"
+      ],
+      "paragraphs": [
+        "Durată",
+        "3 Ani",
+        "Formă",
+        "Cu Frecvență (IF)",
+        "Media Admitere",
+        "9.45",
+        "Credite",
+        "180 ECTS",
+        "Programul de Cibernetică Economică pregătește specialiști capabili să modeleze procesele economice folosind instrumente matematice și tehnologii informatice moderne.",
+        "Vei învăța să analizezi date complexe, să dezvolți algoritmi de optimizare și să utilizezi software avansat pentru decizii de business."
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Site oficial",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Facultatea de Cibernetică",
+        "school LICENȚĂ",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "ASE Logo"
+      ]
+    },
+    {
+      "screenId": 8,
+      "title": "Favoritele Mele - Programe (Muted Sand)",
+      "headings": [
+        "Favorite",
+        "Informatică Economică",
+        "Informatică",
+        "Psihologie Clinică",
+        "Arhitectură",
+        "Drept"
+      ],
+      "paragraphs": [
+        "Colecția ta",
+        "FSEGA • UBB Cluj-Napoca",
+        "Matematică și Info • UniBuc",
+        "Psihologie • UVT Timișoara",
+        "Arhitectură • UAUIM",
+        "Drept • UAIC Iași"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Licență",
+        "• 3 Ani",
+        "Master",
+        "• 2 Ani",
+        "• 4 Ani",
+        "Descoperă alte programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 9,
+      "title": "Favoritele Mele (Folder Tabs)",
+      "headings": [
+        "Favorite",
+        "Universitatea Babeș-Bolyai",
+        "Universitatea din București",
+        "Universitatea de Vest"
+      ],
+      "paragraphs": [
+        "Colecția ta"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "UBB Logo",
+        "Unibuc Logo",
+        "UVT Logo"
+      ]
+    },
+    {
+      "screenId": 10,
+      "title": "Filtrează universități",
+      "headings": [
+        "Filtrează universități",
+        "Oraș",
+        "Tip Universitate"
+      ],
+      "paragraphs": [],
+      "inputPlaceholders": [
+        "Caută un oraș..."
+      ],
+      "buttonLabels": [
+        "Publică Buget & Taxă",
+        "Privată Taxă",
+        "Resetează",
+        "Aplică Filtre 3"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "14",
+        "8",
+        "5",
+        "6",
+        "3"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 11,
+      "title": "Filtrează programe",
+      "headings": [
+        "Filtrează programe",
+        "Limbă",
+        "Nivel",
+        "Formă învățământ",
+        "Durată studii"
+      ],
+      "paragraphs": [],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Română 124",
+        "Engleză 45",
+        "Franceză 12",
+        "Germană 8",
+        "Licență",
+        "Master",
+        "Cu frecvență (IF)",
+        "La distanță (ID)",
+        "3 Ani",
+        "4 Ani",
+        "6 Ani",
+        "Resetează",
+        "Aplică Filtre 3"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "124",
+        "45",
+        "12",
+        "8",
+        "Licență",
+        "Master",
+        "3 Ani",
+        "4 Ani",
+        "6 Ani",
+        "3"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 12,
+      "title": "Favorite: Facultăți",
+      "headings": [
+        "Favorite",
+        "Facultatea de Matematică",
+        "Facultatea de Drept",
+        "Facultatea de Psihologie"
+      ],
+      "paragraphs": [
+        "Colecția ta"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 13,
+      "title": "Favorite - Colecție Goală",
+      "headings": [
+        "Favorite",
+        "Colecția ta este goală"
+      ],
+      "paragraphs": [
+        "Colecția ta",
+        "Începe să explorezi universitățile și facultățile din România și salvează-le pe cele care îți plac apăsând pe inimioară."
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează acum",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Explorează acum",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    }
+  ]
+}

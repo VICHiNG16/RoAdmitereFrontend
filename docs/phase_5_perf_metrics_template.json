@@ -1,0 +1,56 @@
+{
+  "platforms": {
+    "ios": [
+      {
+        "flow": "explore-tab-switch",
+        "avgFps": 58.0,
+        "p95FrameMs": 18.0,
+        "droppedFrames": 1
+      },
+      {
+        "flow": "detail-entry",
+        "avgFps": 57.0,
+        "p95FrameMs": 19.0,
+        "droppedFrames": 1
+      },
+      {
+        "flow": "filter-modal-transition",
+        "avgFps": 56.0,
+        "p95FrameMs": 20.0,
+        "droppedFrames": 2
+      },
+      {
+        "flow": "favorites-tab-switch",
+        "avgFps": 58.0,
+        "p95FrameMs": 18.0,
+        "droppedFrames": 1
+      }
+    ],
+    "android": [
+      {
+        "flow": "explore-tab-switch",
+        "avgFps": 56.0,
+        "p95FrameMs": 20.0,
+        "droppedFrames": 2
+      },
+      {
+        "flow": "detail-entry",
+        "avgFps": 55.0,
+        "p95FrameMs": 21.0,
+        "droppedFrames": 2
+      },
+      {
+        "flow": "filter-modal-transition",
+        "avgFps": 55.0,
+        "p95FrameMs": 21.0,
+        "droppedFrames": 3
+      },
+      {
+        "flow": "favorites-tab-switch",
+        "avgFps": 56.0,
+        "p95FrameMs": 20.0,
+        "droppedFrames": 2
+      }
+    ]
+  }
+}

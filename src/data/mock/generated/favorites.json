@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 3,
+      "faculties": 12,
+      "programs": 12,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "favorites": {
+    "collections": [
+      {
+        "kind": "programs",
+        "screenId": 8,
+        "tabs": [
+          "Universități",
+          "Facultăți",
+          "Programe"
+        ],
+        "activeTab": "Programe",
+        "items": [
+          {
+            "entityId": "program-informatica-economica-ubb-cluj-napoca",
+            "name": "Informatică Economică",
+            "subtitle": "FSEGA • UBB Cluj-Napoca",
+            "level": "Licență",
+            "durationLabel": "• 3 Ani"
+          },
+          {
+            "entityId": "program-informatica-unibuc",
+            "name": "Informatică",
+            "subtitle": "Matematică și Info • UniBuc",
+            "level": "Licență",
+            "durationLabel": "• 3 Ani"
+          },
+          {
+            "entityId": "program-psihologie-clinica-uvt-timisoara",
+            "name": "Psihologie Clinică",
+            "subtitle": "Psihologie • UVT Timișoara",
+            "level": "Master",
+            "durationLabel": "• 2 Ani"
+          },
+          {
+            "entityId": "program-arhitectura-uauim",
+            "name": "Arhitectură",
+            "subtitle": "Arhitectură • UAUIM",
+            "level": "Licență",
+            "durationLabel": "• 4 Ani"
+          },
+          {
+            "entityId": "program-drept-uaic-iasi",
+            "name": "Drept",
+            "subtitle": "Drept • UAIC Iași",
+            "level": "Licență",
+            "durationLabel": "• 4 Ani"
+          }
+        ],
+        "addCardLabel": "Descoperă alte programe"
+      },
+      {
+        "kind": "universities",
+        "screenId": 9,
+        "tabs": [
+          "Universități",
+          "Facultăți",
+          "Programe"
+        ],
+        "activeTab": "Universități",
+        "items": [
+          {
+            "entityId": "university-universitatea-babes-bolyai",
+            "name": "Universitatea Babeș-Bolyai",
+            "subtitle": "Cluj-Napoca"
+          },
+          {
+            "entityId": "university-universitatea-din-bucuresti",
+            "name": "Universitatea din București",
+            "subtitle": "București"
+          },
+          {
+            "entityId": "university-universitatea-de-vest",
+            "name": "Universitatea de Vest",
+            "subtitle": "Timișoara"
+          }
+        ],
+        "addCardLabel": "Descoperă mai multe"
+      },
+      {
+        "kind": "faculties",
+        "screenId": 12,
+        "tabs": [
+          "Universități",
+          "Facultăți",
+          "Programe"
+        ],
+        "activeTab": "Facultăți",
+        "items": [
+          {
+            "entityId": "faculty-facultatea-de-matematica",
+            "name": "Facultatea de Matematică",
+            "subtitle": "UBB Cluj"
+          },
+          {
+            "entityId": "faculty-facultatea-de-drept",
+            "name": "Facultatea de Drept",
+            "subtitle": "UniBuc"
+          },
+          {
+            "entityId": "faculty-facultatea-de-psihologie",
+            "name": "Facultatea de Psihologie",
+            "subtitle": "UVT Timișoara"
+          }
+        ],
+        "addCardLabel": "Descoperă mai multe"
+      }
+    ],
+    "emptyState": {
+      "screenId": 13,
+      "title": "Colecția ta este goală",
+      "description": "Începe să explorezi universitățile și facultățile din România și salvează-le pe cele care îți plac apăsând pe inimioară.",
+      "ctaLabel": "Explorează acum"
+    }
+  }
+}

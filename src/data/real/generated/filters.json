@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "sourceRoot": "manual_scraping/merged/ase@custom_run_20260214T181911+ub@custom_run_20260214T114821+ugal@custom_run_20260214T190814+uoradea@custom_run_20260214T190904+upt@custom_run_20260214T201246+utcn@custom_run_20260214T201158+uvt@custom_run_20260214T201234",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 7,
+      "faculties": 102,
+      "programs": 1089,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "filters": [
+    {
+      "id": "filter-universities",
+      "screenId": 10,
+      "title": "Filtreaza universitati",
+      "sections": [
+        {
+          "id": "cities",
+          "label": "Oras",
+          "options": [
+            {
+              "id": "option-bucuresti",
+              "label": "Bucuresti",
+              "count": 2,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-cluj-napoca",
+              "label": "Cluj-Napoca",
+              "count": 1,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-galati",
+              "label": "Galati",
+              "count": 1,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-oradea",
+              "label": "Oradea",
+              "count": 1,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-timisoara",
+              "label": "Timisoara",
+              "count": 2,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "university-types",
+          "label": "Tip Universitate",
+          "options": [
+            {
+              "id": "option-publica",
+              "label": "Publica",
+              "count": 7,
+              "selected": false,
+              "description": "Buget & Taxa"
+            },
+            {
+              "id": "option-privata",
+              "label": "Privata",
+              "count": 0,
+              "selected": false,
+              "description": "Taxa"
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Reseteaza",
+        "applyLabel": "Aplica Filtre",
+        "selectedCount": 0
+      }
+    },
+    {
+      "id": "filter-faculties",
+      "screenId": 5,
+      "title": "Filtreaza facultati",
+      "sections": [
+        {
+          "id": "cities",
+          "label": "Cauta oras",
+          "options": [
+            {
+              "id": "option-bucuresti",
+              "label": "Bucuresti",
+              "count": 44,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-cluj-napoca",
+              "label": "Cluj-Napoca",
+              "count": 7,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-galati",
+              "label": "Galati",
+              "count": 15,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-oradea",
+              "label": "Oradea",
+              "count": 15,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-timisoara",
+              "label": "Timisoara",
+              "count": 21,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "domains",
+          "label": "Domenii",
+          "options": [
+            {
+              "id": "option-it-calculatoare",
+              "label": "IT & Calculatoare",
+              "count": 246,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-medicina",
+              "label": "Medicina",
+              "count": 56,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-drept",
+              "label": "Drept",
+              "count": 39,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-economie",
+              "label": "Economie",
+              "count": 177,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-arte",
+              "label": "Arte",
+              "count": 44,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-inginerie",
+              "label": "Inginerie",
+              "count": 184,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-litere",
+              "label": "Litere",
+              "count": 183,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-psihologie",
+              "label": "Psihologie",
+              "count": 84,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-stiinte-politice",
+              "label": "Stiinte Politice",
+              "count": 24,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-jurnalism",
+              "label": "Jurnalism",
+              "count": 66,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-arhitectura",
+              "label": "Arhitectura",
+              "count": 15,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Reseteaza",
+        "applyLabel": "Aplica Filtre",
+        "selectedCount": 0
+      }
+    },
+    {
+      "id": "filter-programs",
+      "screenId": 11,
+      "title": "Filtreaza programe",
+      "sections": [
+        {
+          "id": "languages",
+          "label": "Limba",
+          "options": [
+            {
+              "id": "option-romana",
+              "label": "Romana",
+              "count": 902,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-engleza",
+              "label": "Engleza",
+              "count": 154,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-franceza",
+              "label": "Franceza",
+              "count": 9,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-germana",
+              "label": "Germana",
+              "count": 23,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "levels",
+          "label": "Nivel",
+          "options": [
+            {
+              "id": "option-licenta",
+              "label": "Licenta",
+              "count": 467,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-master",
+              "label": "Master",
+              "count": 622,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "study-forms",
+          "label": "Forma invatamant",
+          "options": [
+            {
+              "id": "option-cu-frecventa-if",
+              "label": "Cu frecventa (IF)",
+              "count": 1077,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-la-distanta-id",
+              "label": "La distanta (ID)",
+              "count": 12,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "durations",
+          "label": "Durata studii",
+          "options": [
+            {
+              "id": "option-1-ani",
+              "label": "1 Ani",
+              "count": 5,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-2-ani",
+              "label": "2 Ani",
+              "count": 616,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-3-ani",
+              "label": "3 Ani",
+              "count": 373,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-4-ani",
+              "label": "4 Ani",
+              "count": 88,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-5-ani",
+              "label": "5 Ani",
+              "count": 1,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-6-ani",
+              "label": "6 Ani",
+              "count": 5,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Reseteaza",
+        "applyLabel": "Aplica Filtre",
+        "selectedCount": 0
+      }
+    }
+  ]
+}

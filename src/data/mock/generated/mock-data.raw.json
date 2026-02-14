@@ -1,0 +1,1481 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 3,
+      "faculties": 12,
+      "programs": 12,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "universities": [
+    {
+      "id": "university-universitatea-babes-bolyai",
+      "name": "Universitatea Babeș-Bolyai",
+      "city": "Cluj-Napoca",
+      "facultyCountLabel": "21 Facultăți",
+      "facultyCount": 21,
+      "logoAlt": "UBB Logo",
+      "logoUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuChT7bqptPwZh6KORlWxs-SNAJzmknkWUWfpwC1frzQ4NqiaWSFhnN5IuSflKyPPc_XmAAxMCPnpcozt747tAMclPg8z4esgKgDFNXfXv1z8lgaVB380XcqwehFwMUFWdz_V9qgn5vyLs12ETDt4ZrRABuyZ2XAGVXMfrpb8u35W8VFYK6x_u0D2u51yX4CJHcCyhA7OAOO4sDbDedNwzX9KkhtrRbB0lWMd1taJCNbnqPmtoADmGEMR5jCYojEB-rgeNyCh_5snwY",
+      "description": "Tradiție și excelență într-un mediu multicultural vibrant, chiar în inima Transilvaniei.",
+      "locationLabel": "Cluj-Napoca, România",
+      "isFavorite": true,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-de-vest",
+      "name": "Universitatea de Vest",
+      "city": "Timișoara",
+      "facultyCountLabel": "11 Facultăți",
+      "facultyCount": 11,
+      "logoAlt": "UVT Logo",
+      "logoUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-wem7QdNnnUUGHac-qC6YYg6sXl5278E-FfUxddyWMhMXElGi0QO79zU1-ajNaghwCeSq6MDZ-GOu0YShjFz4kUbBoRb3vxlrFpnAmqdItGU-PPUztVQaDBRw_mOF06lsQF5Ot0fVixWeA8QlZJCfIDhHN87OxihXSX3fGXjIIS247_PnUs_HK29o3EY9QwWbMHZEu1rrewosBW4CTs8Wzc3pYkJK5FNrAYagQJfA-G1ISIIUvpgbkm2RgdmbZ3bPGsoka6ssQbk",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        1,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-din-bucuresti",
+      "name": "Universitatea din București",
+      "city": "București",
+      "facultyCountLabel": "19 Facultăți",
+      "facultyCount": 19,
+      "logoAlt": "Unibuc Logo",
+      "logoUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIJxtOagqPgO5yVx98F1sbiXDb98ug1IpAkaa4XHL1nnx3VcFUytiHKGCGX3W2skFXleg3w0nLrl2jBXTb-5ihVwZw3y_Gnws5gz_dWcn0urk_Ei0i1VZJ8wC1hSvBQSu77N6s6TqEUBqE2zZx91kTS1yKn1Mi9tVBiTKaGeTORojYY_wfObZoUv9Z2DhtP7uHh8OjnuMQLDY_5T-65BBiQjElSSGDqlkPJ7J-L5a98-kMMSUKbuHZ6RY8c_jLOU_-9qVqJeSws0U",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        1,
+        9
+      ]
+    }
+  ],
+  "faculties": [
+    {
+      "id": "faculty-arte-si-design",
+      "name": "Arte și Design",
+      "universityName": "UNArte",
+      "domain": "Arte Vizuale",
+      "programCountLabel": "14 Programe",
+      "programCount": 14,
+      "icon": "palette",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        3
+      ]
+    },
+    {
+      "id": "faculty-drept",
+      "name": "Drept",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "3 programe",
+      "programCount": 3,
+      "icon": "",
+      "description": "Justiție și legislație modernă.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-biologie",
+      "name": "Facultatea de Biologie",
+      "universityName": "UniBuc",
+      "domain": "Științele Naturii",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        3
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-drept",
+      "name": "Facultatea de Drept",
+      "universityName": "UVT Timișoara",
+      "domain": "Științe Juridice",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        3,
+        12
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-istorie",
+      "name": "Facultatea de Istorie",
+      "universityName": "UBB Cluj",
+      "domain": "Științe Umaniste",
+      "programCountLabel": "12 Programe",
+      "programCount": 12,
+      "icon": "history_edu",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        3
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-matematica",
+      "name": "Facultatea de Matematică",
+      "universityName": "UBB Cluj",
+      "domain": "",
+      "programCountLabel": "",
+      "programCount": null,
+      "icon": "",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        12
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-matematica-si-informatica",
+      "name": "Facultatea de Matematică și Informatică",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "3 total",
+      "programCount": 3,
+      "icon": "",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Str. M. Kogălniceanu 1",
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-psihologie",
+      "name": "Facultatea de Psihologie",
+      "universityName": "UVT Timișoara",
+      "domain": "",
+      "programCountLabel": "",
+      "programCount": null,
+      "icon": "",
+      "description": "",
+      "locationLabel": "",
+      "isFavorite": true,
+      "sourceScreens": [
+        12
+      ]
+    },
+    {
+      "id": "faculty-geografie",
+      "name": "Geografie",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "5 programe",
+      "programCount": 5,
+      "icon": "",
+      "description": "Studiul pământului și turism.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-litere",
+      "name": "Litere",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "12 programe",
+      "programCount": 12,
+      "icon": "",
+      "description": "Studiul limbilor, literaturii și culturii într-un cadru academic de prestigiu.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-matematica-si-informatica",
+      "name": "Matematică și Informatică",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "8 programe",
+      "programCount": 8,
+      "icon": "",
+      "description": "Inovație în cod și algoritmi.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    },
+    {
+      "id": "faculty-teatru-si-film",
+      "name": "Teatru și Film",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "domain": "",
+      "programCountLabel": "4 programe",
+      "programCount": 4,
+      "icon": "",
+      "description": "Artă scenică și producție.",
+      "locationLabel": "",
+      "isFavorite": false,
+      "sourceScreens": [
+        2
+      ]
+    }
+  ],
+  "programs": [
+    {
+      "id": "program-arhitectura-uauim",
+      "name": "Arhitectură",
+      "level": "Licență",
+      "durationLabel": "• 4 Ani",
+      "durationYears": 4,
+      "studyMode": "",
+      "universityName": "UAUIM",
+      "facultyName": "Arhitectură",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-cibernetica-economica-ase-bucuresti",
+      "name": "Cibernetică Economică",
+      "level": "Licență",
+      "durationLabel": "3 Ani • Zi",
+      "durationYears": 3,
+      "studyMode": "Zi",
+      "universityName": "ASE București",
+      "facultyName": "CSIE",
+      "language": "",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": 9.45,
+      "descriptionParagraphs": [
+        "Programul de Cibernetică Economică pregătește specialiști capabili să modeleze procesele economice folosind instrumente matematice și tehnologii informatice moderne.",
+        "Vei învăța să analizezi date complexe, să dezvolți algoritmi de optimizare și să utilizezi software avansat pentru decizii de business."
+      ],
+      "careerOpportunities": [
+        "Analist de date",
+        "Data Scientist",
+        "Specialist IT",
+        "Consultant Business",
+        "Manager Proiect"
+      ],
+      "isFavorite": false,
+      "sourceScreens": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "program-drept-uaic-iasi",
+      "name": "Drept",
+      "level": "Licență",
+      "durationLabel": "• 4 Ani",
+      "durationYears": 4,
+      "studyMode": "",
+      "universityName": "UAIC Iași",
+      "facultyName": "Drept",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-drept-ubb-cluj",
+      "name": "Drept",
+      "level": "Licență",
+      "durationLabel": "4 Ani • Zi",
+      "durationYears": 4,
+      "studyMode": "Zi",
+      "universityName": "UBB Cluj",
+      "facultyName": "Facultatea de Drept",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        6
+      ]
+    },
+    {
+      "id": "program-informatica-economica-ubb-cluj-napoca",
+      "name": "Informatică Economică",
+      "level": "Licență",
+      "durationLabel": "• 3 Ani",
+      "durationYears": 3,
+      "studyMode": "",
+      "universityName": "UBB Cluj-Napoca",
+      "facultyName": "FSEGA",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-informatica-unibuc",
+      "name": "Informatică",
+      "level": "Licență",
+      "durationLabel": "• 3 Ani",
+      "durationYears": 3,
+      "studyMode": "",
+      "universityName": "UniBuc",
+      "facultyName": "Matematică și Info",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    },
+    {
+      "id": "program-informatica-universitatea-babes-bolyai",
+      "name": "Informatică",
+      "level": "Licență",
+      "durationLabel": "3 ani • Cu frecvență • Română/Engleză",
+      "durationYears": 3,
+      "studyMode": "IF",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "facultyName": "Facultatea de Matematică și Informatică",
+      "language": "Română/Engleză",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "program-informatica-uvt-timisoara",
+      "name": "Informatică",
+      "level": "Licență",
+      "durationLabel": "3 Ani • Zi",
+      "durationYears": 3,
+      "studyMode": "Zi",
+      "universityName": "UVT Timișoara",
+      "facultyName": "FMI",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        6
+      ]
+    },
+    {
+      "id": "program-matematica-aplicata-universitatea-babes-bolyai",
+      "name": "Matematică Aplicată",
+      "level": "Licență",
+      "durationLabel": "3 ani • Cu frecvență • Română",
+      "durationYears": 3,
+      "studyMode": "IF",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "facultyName": "Facultatea de Matematică și Informatică",
+      "language": "Română",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "program-matematica-universitatea-babes-bolyai",
+      "name": "Matematică",
+      "level": "Licență",
+      "durationLabel": "3 ani • Cu frecvență • Română",
+      "durationYears": 3,
+      "studyMode": "IF",
+      "universityName": "Universitatea Babeș-Bolyai",
+      "facultyName": "Facultatea de Matematică și Informatică",
+      "language": "Română",
+      "creditsLabel": "180 ECTS",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        4
+      ]
+    },
+    {
+      "id": "program-psihologie-clinica-univ-din-bucuresti",
+      "name": "Psihologie Clinică",
+      "level": "Master",
+      "durationLabel": "2 Ani • Zi",
+      "durationYears": 2,
+      "studyMode": "Zi",
+      "universityName": "Univ. din București",
+      "facultyName": "Psihologie",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": false,
+      "sourceScreens": [
+        6
+      ]
+    },
+    {
+      "id": "program-psihologie-clinica-uvt-timisoara",
+      "name": "Psihologie Clinică",
+      "level": "Master",
+      "durationLabel": "• 2 Ani",
+      "durationYears": 2,
+      "studyMode": "",
+      "universityName": "UVT Timișoara",
+      "facultyName": "Psihologie",
+      "language": "",
+      "creditsLabel": "",
+      "admissionAverage": null,
+      "descriptionParagraphs": [],
+      "careerOpportunities": [],
+      "isFavorite": true,
+      "sourceScreens": [
+        8
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "filter-faculties",
+      "screenId": 5,
+      "title": "Filtrează facultăți",
+      "sections": [
+        {
+          "id": "cities",
+          "label": "Caută oraș",
+          "options": [
+            {
+              "id": "option-bucuresti",
+              "label": "București",
+              "count": 24,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-cluj-napoca",
+              "label": "Cluj-Napoca",
+              "count": 18,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-iasi",
+              "label": "Iași",
+              "count": 12,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-timisoara",
+              "label": "Timișoara",
+              "count": 10,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-brasov",
+              "label": "Brașov",
+              "count": 8,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "domains",
+          "label": "Domenii",
+          "options": [
+            {
+              "id": "option-it-calculatoare",
+              "label": "IT & Calculatoare",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-medicina",
+              "label": "Medicină",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-drept",
+              "label": "Drept",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-economie",
+              "label": "Economie",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-arte",
+              "label": "Arte",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-inginerie",
+              "label": "Inginerie",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-litere",
+              "label": "Litere",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-psihologie",
+              "label": "Psihologie",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-stiinte-politice",
+              "label": "Științe Politice",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-jurnalism",
+              "label": "Jurnalism",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-arhitectura",
+              "label": "Arhitectură",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Resetează",
+        "applyLabel": "Aplică Filtre",
+        "selectedCount": 3
+      }
+    },
+    {
+      "id": "filter-universities",
+      "screenId": 10,
+      "title": "Filtrează universități",
+      "sections": [
+        {
+          "id": "cities",
+          "label": "Oraș",
+          "options": [
+            {
+              "id": "option-bucuresti",
+              "label": "București",
+              "count": 14,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-cluj-napoca",
+              "label": "Cluj-Napoca",
+              "count": 8,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-timisoara",
+              "label": "Timișoara",
+              "count": 5,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-iasi",
+              "label": "Iași",
+              "count": 6,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "university-types",
+          "label": "Tip Universitate",
+          "options": [
+            {
+              "id": "option-publica",
+              "label": "Publică",
+              "count": null,
+              "selected": false,
+              "description": "Buget & Taxă"
+            },
+            {
+              "id": "option-privata",
+              "label": "Privată",
+              "count": null,
+              "selected": true,
+              "description": "Taxă"
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Resetează",
+        "applyLabel": "Aplică Filtre",
+        "selectedCount": 3
+      }
+    },
+    {
+      "id": "filter-programs",
+      "screenId": 11,
+      "title": "Filtrează programe",
+      "sections": [
+        {
+          "id": "languages",
+          "label": "Limbă",
+          "options": [
+            {
+              "id": "option-romana",
+              "label": "Română",
+              "count": 124,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-engleza",
+              "label": "Engleză",
+              "count": 45,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-franceza",
+              "label": "Franceză",
+              "count": 12,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-germana",
+              "label": "Germană",
+              "count": 8,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "levels",
+          "label": "Nivel",
+          "options": [
+            {
+              "id": "option-licenta",
+              "label": "Licență",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-master",
+              "label": "Master",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "study-forms",
+          "label": "Formă învățământ",
+          "options": [
+            {
+              "id": "option-cu-frecventa-if",
+              "label": "Cu frecvență (IF)",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-la-distanta-id",
+              "label": "La distanță (ID)",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": "durations",
+          "label": "Durată studii",
+          "options": [
+            {
+              "id": "option-3-ani",
+              "label": "3 Ani",
+              "count": null,
+              "selected": true,
+              "description": ""
+            },
+            {
+              "id": "option-4-ani",
+              "label": "4 Ani",
+              "count": null,
+              "selected": false,
+              "description": ""
+            },
+            {
+              "id": "option-6-ani",
+              "label": "6 Ani",
+              "count": null,
+              "selected": false,
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "footer": {
+        "resetLabel": "Resetează",
+        "applyLabel": "Aplică Filtre",
+        "selectedCount": 3
+      }
+    }
+  ],
+  "favorites": {
+    "collections": [
+      {
+        "kind": "programs",
+        "screenId": 8,
+        "tabs": [
+          "Universități",
+          "Facultăți",
+          "Programe"
+        ],
+        "activeTab": "Programe",
+        "items": [
+          {
+            "entityId": "program-informatica-economica-ubb-cluj-napoca",
+            "name": "Informatică Economică",
+            "subtitle": "FSEGA • UBB Cluj-Napoca",
+            "level": "Licență",
+            "durationLabel": "• 3 Ani"
+          },
+          {
+            "entityId": "program-informatica-unibuc",
+            "name": "Informatică",
+            "subtitle": "Matematică și Info • UniBuc",
+            "level": "Licență",
+            "durationLabel": "• 3 Ani"
+          },
+          {
+            "entityId": "program-psihologie-clinica-uvt-timisoara",
+            "name": "Psihologie Clinică",
+            "subtitle": "Psihologie • UVT Timișoara",
+            "level": "Master",
+            "durationLabel": "• 2 Ani"
+          },
+          {
+            "entityId": "program-arhitectura-uauim",
+            "name": "Arhitectură",
+            "subtitle": "Arhitectură • UAUIM",
+            "level": "Licență",
+            "durationLabel": "• 4 Ani"
+          },
+          {
+            "entityId": "program-drept-uaic-iasi",
+            "name": "Drept",
+            "subtitle": "Drept • UAIC Iași",
+            "level": "Licență",
+            "durationLabel": "• 4 Ani"
+          }
+        ],
+        "addCardLabel": "Descoperă alte programe"
+      },
+      {
+        "kind": "universities",
+        "screenId": 9,
+        "tabs": [
+          "Universități",
+          "Facultăți",
+          "Programe"
+        ],
+        "activeTab": "Universități",
+        "items": [
+          {
+            "entityId": "university-universitatea-babes-bolyai",
+            "name": "Universitatea Babeș-Bolyai",
+            "subtitle": "Cluj-Napoca"
+          },
+          {
+            "entityId": "university-universitatea-din-bucuresti",
+            "name": "Universitatea din București",
+            "subtitle": "București"
+          },
+          {
+            "entityId": "university-universitatea-de-vest",
+            "name": "Universitatea de Vest",
+            "subtitle": "Timișoara"
+          }
+        ],
+        "addCardLabel": "Descoperă mai multe"
+      },
+      {
+        "kind": "faculties",
+        "screenId": 12,
+        "tabs": [
+          "Universități",
+          "Facultăți",
+          "Programe"
+        ],
+        "activeTab": "Facultăți",
+        "items": [
+          {
+            "entityId": "faculty-facultatea-de-matematica",
+            "name": "Facultatea de Matematică",
+            "subtitle": "UBB Cluj"
+          },
+          {
+            "entityId": "faculty-facultatea-de-drept",
+            "name": "Facultatea de Drept",
+            "subtitle": "UniBuc"
+          },
+          {
+            "entityId": "faculty-facultatea-de-psihologie",
+            "name": "Facultatea de Psihologie",
+            "subtitle": "UVT Timișoara"
+          }
+        ],
+        "addCardLabel": "Descoperă mai multe"
+      }
+    ],
+    "emptyState": {
+      "screenId": 13,
+      "title": "Colecția ta este goală",
+      "description": "Începe să explorezi universitățile și facultățile din România și salvează-le pe cele care îți plac apăsând pe inimioară.",
+      "ctaLabel": "Explorează acum"
+    }
+  },
+  "screenCopy": [
+    {
+      "screenId": 1,
+      "title": "Explorează (Bento Style)",
+      "headings": [
+        "Bună!",
+        "Universitatea Babeș-Bolyai",
+        "Universitatea din București",
+        "Universitatea de Vest"
+      ],
+      "paragraphs": [
+        "Ce descoperim azi?"
+      ],
+      "inputPlaceholders": [
+        "Caută universități..."
+      ],
+      "buttonLabels": [
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "21 Facultăți",
+        "19 Facultăți",
+        "11 Facultăți",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "UBB Logo",
+        "Unibuc Logo",
+        "UVT Logo"
+      ]
+    },
+    {
+      "screenId": 2,
+      "title": "Detalii Universitate (Foto & Grid)",
+      "headings": [
+        "Universitatea Babeș-Bolyai",
+        "Facultăți",
+        "Matematică și Informatică",
+        "Drept",
+        "Geografie",
+        "Teatru și Film",
+        "Litere"
+      ],
+      "paragraphs": [
+        "Tradiție și excelență într-un mediu multicultural vibrant, chiar în inima Transilvaniei.",
+        "Inovație în cod și algoritmi.",
+        "Justiție și legislație modernă.",
+        "Studiul pământului și turism.",
+        "Artă scenică și producție.",
+        "Studiul limbilor, literaturii și culturii într-un cadru academic de prestigiu."
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Site oficial",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "21 total",
+        "8 programe",
+        "3 programe",
+        "5 programe",
+        "4 programe",
+        "12 programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "Universitatea Babes-Bolyai Main Building",
+        "UBB Logo"
+      ]
+    },
+    {
+      "screenId": 3,
+      "title": "Explorează Facultăți",
+      "headings": [
+        "Bună!",
+        "Facultatea de Istorie",
+        "Facultatea de Biologie",
+        "Facultatea de Drept",
+        "Arte și Design"
+      ],
+      "paragraphs": [
+        "Ce descoperim azi?"
+      ],
+      "inputPlaceholders": [
+        "Caută facultăți..."
+      ],
+      "buttonLabels": [
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Științe Umaniste",
+        "12 Programe",
+        "8 Programe",
+        "5 Programe",
+        "14 Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 4,
+      "title": "Detalii Facultate (Bento)",
+      "headings": [
+        "Facultatea de Matematică și Informatică",
+        "Programe de studiu",
+        "Informatică",
+        "Matematică",
+        "Matematică Aplicată"
+      ],
+      "paragraphs": [
+        "3 ani • Cu frecvență • Română/Engleză",
+        "3 ani • Cu frecvență • Română"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Site oficial",
+        "Licență",
+        "Master",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Cluj-Napoca, Str. M. Kogălniceanu 1",
+        "3 total",
+        "Licență",
+        "180 ECTS",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 5,
+      "title": "Filtrează facultăți",
+      "headings": [
+        "Filtrează facultăți",
+        "Caută oraș",
+        "Domenii"
+      ],
+      "paragraphs": [],
+      "inputPlaceholders": [
+        "Caută un oraș..."
+      ],
+      "buttonLabels": [
+        "IT & Calculatoare",
+        "Medicină",
+        "Drept",
+        "Economie",
+        "Arte",
+        "Inginerie",
+        "Litere",
+        "Psihologie",
+        "Științe Politice",
+        "Jurnalism",
+        "Arhitectură",
+        "Resetează",
+        "Aplică Filtre 3"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "24",
+        "18",
+        "12",
+        "10",
+        "8",
+        "3"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 6,
+      "title": "Explorează Programe de Studiu",
+      "headings": [
+        "Bună!",
+        "Cibernetică Economică",
+        "Drept",
+        "Psihologie Clinică",
+        "Informatică"
+      ],
+      "paragraphs": [
+        "Ce studiem azi?"
+      ],
+      "inputPlaceholders": [
+        "Caută programe..."
+      ],
+      "buttonLabels": [
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Licență",
+        "3 Ani • Zi",
+        "4 Ani • Zi",
+        "Facultatea de Drept",
+        "Master",
+        "2 Ani • Zi",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 7,
+      "title": "Detalii Program Rafinate",
+      "headings": [
+        "Cibernetică Economică",
+        "info Despre program",
+        "work Oportunități carieră"
+      ],
+      "paragraphs": [
+        "Durată",
+        "3 Ani",
+        "Formă",
+        "Cu Frecvență (IF)",
+        "Media Admitere",
+        "9.45",
+        "Credite",
+        "180 ECTS",
+        "Programul de Cibernetică Economică pregătește specialiști capabili să modeleze procesele economice folosind instrumente matematice și tehnologii informatice moderne.",
+        "Vei învăța să analizezi date complexe, să dezvolți algoritmi de optimizare și să utilizezi software avansat pentru decizii de business."
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Site oficial",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Facultatea de Cibernetică",
+        "school LICENȚĂ",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "ASE Logo"
+      ]
+    },
+    {
+      "screenId": 8,
+      "title": "Favoritele Mele - Programe (Muted Sand)",
+      "headings": [
+        "Favorite",
+        "Informatică Economică",
+        "Informatică",
+        "Psihologie Clinică",
+        "Arhitectură",
+        "Drept"
+      ],
+      "paragraphs": [
+        "Colecția ta",
+        "FSEGA • UBB Cluj-Napoca",
+        "Matematică și Info • UniBuc",
+        "Psihologie • UVT Timișoara",
+        "Arhitectură • UAUIM",
+        "Drept • UAIC Iași"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Licență",
+        "• 3 Ani",
+        "Master",
+        "• 2 Ani",
+        "• 4 Ani",
+        "Descoperă alte programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 9,
+      "title": "Favoritele Mele (Folder Tabs)",
+      "headings": [
+        "Favorite",
+        "Universitatea Babeș-Bolyai",
+        "Universitatea din București",
+        "Universitatea de Vest"
+      ],
+      "paragraphs": [
+        "Colecția ta"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": [
+        "UBB Logo",
+        "Unibuc Logo",
+        "UVT Logo"
+      ]
+    },
+    {
+      "screenId": 10,
+      "title": "Filtrează universități",
+      "headings": [
+        "Filtrează universități",
+        "Oraș",
+        "Tip Universitate"
+      ],
+      "paragraphs": [],
+      "inputPlaceholders": [
+        "Caută un oraș..."
+      ],
+      "buttonLabels": [
+        "Publică Buget & Taxă",
+        "Privată Taxă",
+        "Resetează",
+        "Aplică Filtre 3"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "14",
+        "8",
+        "5",
+        "6",
+        "3"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 11,
+      "title": "Filtrează programe",
+      "headings": [
+        "Filtrează programe",
+        "Limbă",
+        "Nivel",
+        "Formă învățământ",
+        "Durată studii"
+      ],
+      "paragraphs": [],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Română 124",
+        "Engleză 45",
+        "Franceză 12",
+        "Germană 8",
+        "Licență",
+        "Master",
+        "Cu frecvență (IF)",
+        "La distanță (ID)",
+        "3 Ani",
+        "4 Ani",
+        "6 Ani",
+        "Resetează",
+        "Aplică Filtre 3"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "124",
+        "45",
+        "12",
+        "8",
+        "Licență",
+        "Master",
+        "3 Ani",
+        "4 Ani",
+        "6 Ani",
+        "3"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 12,
+      "title": "Favorite: Facultăți",
+      "headings": [
+        "Favorite",
+        "Facultatea de Matematică",
+        "Facultatea de Drept",
+        "Facultatea de Psihologie"
+      ],
+      "paragraphs": [
+        "Colecția ta"
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    },
+    {
+      "screenId": 13,
+      "title": "Favorite - Colecție Goală",
+      "headings": [
+        "Favorite",
+        "Colecția ta este goală"
+      ],
+      "paragraphs": [
+        "Colecția ta",
+        "Începe să explorezi universitățile și facultățile din România și salvează-le pe cele care îți plac apăsând pe inimioară."
+      ],
+      "inputPlaceholders": [],
+      "buttonLabels": [
+        "Universități",
+        "Facultăți",
+        "Programe",
+        "Explorează acum",
+        "Explorează",
+        "Favorite"
+      ],
+      "badgeTexts": [
+        "9:41",
+        "Explorează acum",
+        "Explorează",
+        "Favorite"
+      ],
+      "imageAlts": []
+    }
+  ],
+  "presentation": {
+    "meta": {
+      "sourceRoot": "stitch_roadmitere",
+      "screenCount": 13,
+      "deterministicOrder": "entity maps sorted by entityId",
+      "counts": {
+        "universities": 3,
+        "faculties": 12,
+        "programs": 12,
+        "filterScreens": 3,
+        "favoriteCollections": 3
+      }
+    },
+    "universities": {
+      "university-universitatea-babes-bolyai": {
+        "mediaTone": "accent",
+        "typeOptionId": "option-privata"
+      },
+      "university-universitatea-de-vest": {
+        "mediaTone": "accent",
+        "typeOptionId": "option-publica"
+      },
+      "university-universitatea-din-bucuresti": {
+        "mediaTone": "olive",
+        "typeOptionId": "option-publica"
+      }
+    },
+    "faculties": {
+      "faculty-arte-si-design": {
+        "tone": "olive"
+      },
+      "faculty-drept": {
+        "tone": "accent"
+      },
+      "faculty-facultatea-de-biologie": {
+        "tone": "olive"
+      },
+      "faculty-facultatea-de-drept": {
+        "tone": "accent"
+      },
+      "faculty-facultatea-de-istorie": {
+        "tone": "accent"
+      },
+      "faculty-facultatea-de-matematica": {
+        "tone": "accent"
+      },
+      "faculty-facultatea-de-matematica-si-informatica": {
+        "tone": "accent"
+      },
+      "faculty-facultatea-de-psihologie": {
+        "tone": "accent"
+      },
+      "faculty-geografie": {
+        "tone": "accent"
+      },
+      "faculty-litere": {
+        "tone": "accent"
+      },
+      "faculty-matematica-si-informatica": {
+        "tone": "accent"
+      },
+      "faculty-teatru-si-film": {
+        "tone": "accent"
+      }
+    },
+    "programs": {
+      "program-arhitectura-uauim": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-cibernetica-economica-ase-bucuresti": {
+        "tone": "accent",
+        "icon": "analytics"
+      },
+      "program-drept-uaic-iasi": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-drept-ubb-cluj": {
+        "tone": "olive",
+        "icon": "gavel"
+      },
+      "program-informatica-economica-ubb-cluj-napoca": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-informatica-unibuc": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-informatica-universitatea-babes-bolyai": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-informatica-uvt-timisoara": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-matematica-aplicata-universitatea-babes-bolyai": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-matematica-universitatea-babes-bolyai": {
+        "tone": "accent",
+        "icon": "code"
+      },
+      "program-psihologie-clinica-univ-din-bucuresti": {
+        "tone": "deepBlue",
+        "icon": "psychology"
+      },
+      "program-psihologie-clinica-uvt-timisoara": {
+        "tone": "accent",
+        "icon": "code"
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "sourceRoot": "stitch_roadmitere",
+    "screenCount": 13,
+    "deterministicOrder": "entity maps sorted by entityId",
+    "counts": {
+      "universities": 3,
+      "faculties": 12,
+      "programs": 12,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "universities": {
+    "university-universitatea-babes-bolyai": {
+      "mediaTone": "accent",
+      "typeOptionId": "option-privata"
+    },
+    "university-universitatea-de-vest": {
+      "mediaTone": "accent",
+      "typeOptionId": "option-publica"
+    },
+    "university-universitatea-din-bucuresti": {
+      "mediaTone": "olive",
+      "typeOptionId": "option-publica"
+    }
+  },
+  "faculties": {
+    "faculty-arte-si-design": {
+      "tone": "olive"
+    },
+    "faculty-drept": {
+      "tone": "accent"
+    },
+    "faculty-facultatea-de-biologie": {
+      "tone": "olive"
+    },
+    "faculty-facultatea-de-drept": {
+      "tone": "accent"
+    },
+    "faculty-facultatea-de-istorie": {
+      "tone": "accent"
+    },
+    "faculty-facultatea-de-matematica": {
+      "tone": "accent"
+    },
+    "faculty-facultatea-de-matematica-si-informatica": {
+      "tone": "accent"
+    },
+    "faculty-facultatea-de-psihologie": {
+      "tone": "accent"
+    },
+    "faculty-geografie": {
+      "tone": "accent"
+    },
+    "faculty-litere": {
+      "tone": "accent"
+    },
+    "faculty-matematica-si-informatica": {
+      "tone": "accent"
+    },
+    "faculty-teatru-si-film": {
+      "tone": "accent"
+    }
+  },
+  "programs": {
+    "program-arhitectura-uauim": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-cibernetica-economica-ase-bucuresti": {
+      "tone": "accent",
+      "icon": "analytics"
+    },
+    "program-drept-uaic-iasi": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-drept-ubb-cluj": {
+      "tone": "olive",
+      "icon": "gavel"
+    },
+    "program-informatica-economica-ubb-cluj-napoca": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-informatica-unibuc": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-informatica-universitatea-babes-bolyai": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-informatica-uvt-timisoara": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-matematica-aplicata-universitatea-babes-bolyai": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-matematica-universitatea-babes-bolyai": {
+      "tone": "accent",
+      "icon": "code"
+    },
+    "program-psihologie-clinica-univ-din-bucuresti": {
+      "tone": "deepBlue",
+      "icon": "psychology"
+    },
+    "program-psihologie-clinica-uvt-timisoara": {
+      "tone": "accent",
+      "icon": "code"
+    }
+  }
+}

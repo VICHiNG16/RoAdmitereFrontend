@@ -1,0 +1,263 @@
+Here is a comprehensive review of your code.
+
+Overall, the architecture is clean and modular, and you are using Reanimated correctly for the most part. However, the "jankiness" you feel comes from **conflicting sources of truth** for your animations and the lack of **Layout Transitions** for your filters.
+
+Here are the specific issues and the solutions for them.
+
+### 1. The "Gliding Pill" Smoothness (Major Fix)
+
+**The Problem:**
+Your `SegmentedTabs` has a "split personality".
+
+* For **Taps**, it calculates positions in JS (`useMemo`) and animates them inside a `useEffect`. This causes a 1-frame delay between the state update and the animation starting.
+* For **Swipes**, it waits for the parent to pass a `swipePreview` object.
+* Inside `useAnimatedStyle`, you have an `if (hasSwipePreview)` check. Switching between these two logic branches during a gesture causes the "jump" or lack of smoothness you are seeing.
+
+**The Solution:**
+Refactor `SegmentedTabs` to be purely **driven by a single SharedValue** representing the "Current Floating Index". This value (e.g., `0`, `1`, `1.5`) should come from the parent or be derived internally in a unified way.
+
+**Refactored `SegmentedTabs.tsx`:**
+Replace your component with this version. It removes the JS-side calculation for the indicator and relies entirely on Reanimated for the pill position.
+
+```tsx
+import React, { useState, useMemo } from "react";
+import type { LayoutChangeEvent, StyleProp, ViewStyle } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import Animated, { 
+  useAnimatedStyle, 
+  useDerivedValue, 
+  withTiming, 
+  interpolate,
+  Extrapolation
+} from "react-native-reanimated";
+import type { SharedValue } from "react-native-reanimated";
+
+// ... keep your imports for theme, PillBadge, etc ...
+import { theme } from "../theme/theme";
+import { shadows } from "../theme/shadows";
+import { typography } from "../theme/typography";
+import { normalizeRomanianText } from "../utils/text";
+import { PillBadge } from "./PillBadge";
+
+// ... keep your types ...
+// Add this new prop to SegmentedTabsProps to unify the driver
+type SegmentedTabsProps = {
+  // ... existing props ...
+  items: SegmentedTabItem[];
+  activeKey: string;
+  onChange: (key: string) => void;
+  // NEW: Optional shared value that represents the exact decimal index (e.g. 0.5, 1.2)
+  // If provided, the pill follows this exactly. If not, it falls back to animating based on activeKey.
+  animatedIndex?: SharedValue<number>; 
+  variant?: SegmentedTabsVariant;
+  // ...
+};
+
+const PILL_CONTAINER_INSET = 6;
+const PILL_HORIZONTAL_PADDING = PILL_CONTAINER_INSET;
+const PILL_TAB_GAP = theme.spacing.xs;
+
+export function SegmentedTabs({
+  items,
+  activeKey,
+  onChange,
+  animatedIndex, // <--- New Prop
+  variant = "pills",
+  style,
+}: SegmentedTabsProps): React.JSX.Element {
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  // 1. Calculate Tab Geometry
+  const tabWidth = useMemo(() => {
+    if (containerWidth <= 0 || items.length === 0) return 0;
+    const totalGap = PILL_TAB_GAP * (items.length - 1);
+    const available = containerWidth - (PILL_HORIZONTAL_PADDING * 2) - totalGap;
+    return available / items.length;
+  }, [containerWidth, items.length]);
+
+  // 2. Determine target index from the active key
+  const targetIndex = items.findIndex((i) => i.key === activeKey);
+  const clampedIndex = Math.max(0, targetIndex);
+
+  // 3. Create a fallback driver if the parent didn't provide one (for Taps)
+  // We use useDerivedValue to create a local animated state if strictly needed, 
+  // but usually, we just want to animate to 'clampedIndex'.
+  const localIndex = useDerivedValue(() => {
+    return withTiming(clampedIndex, { duration: 250 });
+  }, [clampedIndex]);
+
+  // 4. Use the parent's driver if available, otherwise use local
+  const effectiveIndex = animatedIndex ?? localIndex;
+
+  const indicatorStyle = useAnimatedStyle(() => {
+    if (tabWidth === 0) return { opacity: 0 };
+
+    // Simply interpolate the index to the X position
+    const translateX = interpolate(
+      effectiveIndex.value,
+      [0, 1],
+      [PILL_HORIZONTAL_PADDING, PILL_HORIZONTAL_PADDING + tabWidth + PILL_TAB_GAP],
+      Extrapolation.EXTEND
+    );
+
+    return {
+      left: 0, // Fixed left, we use transform for better performance
+      width: tabWidth,
+      transform: [{ translateX }],
+      opacity: 1,
+    };
+  });
+
+  return (
+    <View 
+      onLayout={(e) => setContainerWidth(e.nativeEvent.layout.width)} 
+      style={[styles.pillContainer, style]}
+    >
+      <Animated.View style={[styles.pillIndicator, indicatorStyle]} />
+      
+      {items.map((item, index) => {
+        const isActive = activeKey === item.key;
+        return (
+          <Pressable
+            key={item.key}
+            onPress={() => onChange(item.key)}
+            style={styles.pillTab}
+          >
+            <Text style={[
+               styles.pillLabel, 
+               isActive ? styles.pillLabelActive : styles.pillLabelInactive
+            ]}>
+              {normalizeRomanianText(item.label)}
+            </Text>
+            {/* ... Badge Logic ... */}
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
+// Update styles: ensure pillIndicator uses absolute positioning correctly
+const styles = StyleSheet.create({
+  // ... existing styles ...
+  pillIndicator: {
+    position: "absolute",
+    top: PILL_CONTAINER_INSET,
+    bottom: PILL_CONTAINER_INSET,
+    // left is handled by logic now
+    borderRadius: theme.radii.xl,
+    backgroundColor: theme.colors.surface,
+    ...shadows.card,
+  },
+  // ...
+});
+
+```
+
+**How to connect it in `ExploreTabScreen.tsx`:**
+
+In your parent screen, calculate a single `virtualIndex` shared value that encompasses both the current tab and the swipe offset.
+
+```tsx
+// Inside ExploreTabScreen component
+const activeIndex = EXPLORE_TAB_ORDER.indexOf(activeTab);
+
+// Derive the exact floating index based on your existing pager logic
+const unifiedTabIndex = useDerivedValue(() => {
+  // If we are mid-swipe or transition
+  if (swipeTargetIndexValue.value !== -1) {
+    // Determine direction based on your existing pagerDirection
+    // You essentially want: CurrentIndex + (Progress * Direction)
+    // Note: You might need to tweak the sign based on how you implemented 'direction'
+    const offset = (1 - pagerProgress.value) * pagerDirection.value; 
+    return activeTabIndexValue.value - offset; 
+  }
+  
+  // If idle, just return the active index (Reanimated will interpolate this if it changes)
+  return withTiming(activeTabIndexValue.value, { duration: 250 });
+}, [activeTabIndexValue, pagerProgress, pagerDirection, swipeTargetIndexValue]);
+
+// ... in return ...
+<SegmentedTabs 
+   // ... other props
+   animatedIndex={unifiedTabIndex} 
+/>
+
+```
+
+---
+
+### 2. The Filter Animations (Snap Fix)
+
+**The Problem:**
+You are using standard React rendering (`map`) for your lists. When `filteredUniversities` changes, React effectively destroys the old tree and builds a new one. Elements snap into place instantly.
+
+**The Solution:**
+Use Reanimated's `Layout` prop. This automatically animates items to their new positions when the list order changes or items are removed.
+
+1. **Import Layout animations:**
+```tsx
+import Animated, { FadeIn, FadeOut, LinearTransition } from "react-native-reanimated";
+
+```
+
+
+2. **Wrap your card items:**
+In `renderCardsForTab`, wrap every card in an `Animated.View`.
+
+```tsx
+// Example for Universities
+if (tabKey === "universities") {
+  return filteredUniversities.map((university, index) => (
+    <Animated.View 
+      key={university.id}
+      layout={LinearTransition.springify().damping(14)} // Smooth reordering
+      entering={FadeIn.duration(300)}                   // Fade in on filter match
+      exiting={FadeOut.duration(200)}                   // Fade out on filter mismatch
+    >
+      <CardUniversity
+         // ... props
+      />
+    </Animated.View>
+  ));
+}
+
+```
+
+*Apply this wrapper to the Faculty and Program maps as well.* This will make the list items smoothly shuffle around when you apply a filter, rather than snapping.
+
+---
+
+### 3. Other Code Improvements
+
+1. **Use `FlashList` or `Animated.FlatList`:**
+Currently, you are mapping inside a ScrollView (`styles.cardsColumn`). If you have more than 20-30 items, this will become slow.
+* **Recommendation:** Since you have a complex swipe view, `FlashList` (from `@shopify/flash-list`) is ideal because it handles layout animations well and is performant.
+* If you stick to `map` (because the lists are small, e.g., < 50 items), the `Animated.View` layout props above are sufficient.
+
+
+2. **Simplify Gesture Logic:**
+Your `ExploreTabScreen` gesture handler is very manual (handling `pagerTransition` state manually).
+* **Critique:** You are calling `runOnJS` in `onUpdate` to trigger `beginSwipeTransitionByIndex`. This forces a bridge crossing on every frame where the index changes, which can cause stutter on lower-end Android devices.
+* **Improvement:** Keep `swipeTargetIndexValue` logic purely on the UI thread (SharedValue). Only call `runOnJS` inside `onEnd` to commit the state change (`setActiveTab`) once the user lifts their finger.
+
+
+3. **Search Input Performance:**
+You have `onChangeText={setSearchValue}` on the SearchBar.
+If the list is long, filtering on every keystroke will lag the UI thread.
+**Fix:** Debounce the search or wrap the list rendering in `useDeferredValue` (if using React 18+) or simply debounce the `setSearchValue`.
+```tsx
+// Simple debounce
+const handleSearchChange = useCallback(debounce((text) => {
+  setSearchValue(text);
+}, 300), []);
+
+```
+
+
+
+### Summary of Next Steps
+
+1. **Paste the refactored `SegmentedTabs**` code to unify the pill animation logic.
+2. **Add `animatedIndex={unifiedTabIndex}**` to your `ExploreTabScreen` to connect the swipe gesture directly to the pill.
+3. **Add `layout={LinearTransition.springify()}**` to your list items to fix the "ugly" filter behavior.

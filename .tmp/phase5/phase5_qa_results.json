@@ -1,0 +1,488 @@
+{
+  "generatedAtUtc": "2026-02-14T17:03:20+00:00",
+  "inputs": {
+    "manifestPath": "src/data/mock/generated/stitch-manifest.json",
+    "captureRoot": ".tmp/phase5/captures",
+    "performanceMetricsPath": "docs/perf/real_data_current.json"
+  },
+  "parity": {
+    "status": "pass",
+    "platforms": {
+      "ios": {
+        "status": "pass",
+        "thresholdPercent": 2.0,
+        "passCount": 13,
+        "failCount": 0,
+        "missingCount": 0,
+        "total": 13
+      },
+      "android": {
+        "status": "pass",
+        "thresholdPercent": 3.0,
+        "passCount": 13,
+        "failCount": 0,
+        "missingCount": 0,
+        "total": 13
+      }
+    },
+    "screens": [
+      {
+        "platform": "ios",
+        "screenId": 1,
+        "role": "explore-universities",
+        "referencePath": "stitch_roadmitere/explorează_universități_1/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/01.png",
+        "diffPath": ".tmp/phase5/diffs/ios/01_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 2,
+        "role": "university-detail",
+        "referencePath": "stitch_roadmitere/explorează_universități_2/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/02.png",
+        "diffPath": ".tmp/phase5/diffs/ios/02_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 3,
+        "role": "explore-faculties",
+        "referencePath": "stitch_roadmitere/explorează_universități_3/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/03.png",
+        "diffPath": ".tmp/phase5/diffs/ios/03_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 4,
+        "role": "faculty-detail",
+        "referencePath": "stitch_roadmitere/explorează_universități_4/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/04.png",
+        "diffPath": ".tmp/phase5/diffs/ios/04_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 5,
+        "role": "filter-faculties",
+        "referencePath": "stitch_roadmitere/explorează_universități_5/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/05.png",
+        "diffPath": ".tmp/phase5/diffs/ios/05_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 6,
+        "role": "explore-programs",
+        "referencePath": "stitch_roadmitere/explorează_universități_6/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/06.png",
+        "diffPath": ".tmp/phase5/diffs/ios/06_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 7,
+        "role": "program-detail",
+        "referencePath": "stitch_roadmitere/explorează_universități_7/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/07.png",
+        "diffPath": ".tmp/phase5/diffs/ios/07_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 8,
+        "role": "favorites-programs",
+        "referencePath": "stitch_roadmitere/explorează_universități_8/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/08.png",
+        "diffPath": ".tmp/phase5/diffs/ios/08_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 9,
+        "role": "favorites-universities",
+        "referencePath": "stitch_roadmitere/explorează_universități_9/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/09.png",
+        "diffPath": ".tmp/phase5/diffs/ios/09_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 10,
+        "role": "filter-universities",
+        "referencePath": "stitch_roadmitere/explorează_universități_10/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/10.png",
+        "diffPath": ".tmp/phase5/diffs/ios/10_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 11,
+        "role": "filter-programs",
+        "referencePath": "stitch_roadmitere/explorează_universități_11/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/11.png",
+        "diffPath": ".tmp/phase5/diffs/ios/11_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 12,
+        "role": "favorites-faculties",
+        "referencePath": "stitch_roadmitere/explorează_universități_12/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/12.png",
+        "diffPath": ".tmp/phase5/diffs/ios/12_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "ios",
+        "screenId": 13,
+        "role": "favorites-empty",
+        "referencePath": "stitch_roadmitere/explorează_universități_13/screen.png",
+        "capturePath": ".tmp/phase5/captures/ios/13.png",
+        "diffPath": ".tmp/phase5/diffs/ios/13_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 2.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 1,
+        "role": "explore-universities",
+        "referencePath": "stitch_roadmitere/explorează_universități_1/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/01.png",
+        "diffPath": ".tmp/phase5/diffs/android/01_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 2,
+        "role": "university-detail",
+        "referencePath": "stitch_roadmitere/explorează_universități_2/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/02.png",
+        "diffPath": ".tmp/phase5/diffs/android/02_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 3,
+        "role": "explore-faculties",
+        "referencePath": "stitch_roadmitere/explorează_universități_3/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/03.png",
+        "diffPath": ".tmp/phase5/diffs/android/03_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 4,
+        "role": "faculty-detail",
+        "referencePath": "stitch_roadmitere/explorează_universități_4/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/04.png",
+        "diffPath": ".tmp/phase5/diffs/android/04_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 5,
+        "role": "filter-faculties",
+        "referencePath": "stitch_roadmitere/explorează_universități_5/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/05.png",
+        "diffPath": ".tmp/phase5/diffs/android/05_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 6,
+        "role": "explore-programs",
+        "referencePath": "stitch_roadmitere/explorează_universități_6/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/06.png",
+        "diffPath": ".tmp/phase5/diffs/android/06_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 7,
+        "role": "program-detail",
+        "referencePath": "stitch_roadmitere/explorează_universități_7/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/07.png",
+        "diffPath": ".tmp/phase5/diffs/android/07_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 8,
+        "role": "favorites-programs",
+        "referencePath": "stitch_roadmitere/explorează_universități_8/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/08.png",
+        "diffPath": ".tmp/phase5/diffs/android/08_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 9,
+        "role": "favorites-universities",
+        "referencePath": "stitch_roadmitere/explorează_universități_9/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/09.png",
+        "diffPath": ".tmp/phase5/diffs/android/09_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 10,
+        "role": "filter-universities",
+        "referencePath": "stitch_roadmitere/explorează_universități_10/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/10.png",
+        "diffPath": ".tmp/phase5/diffs/android/10_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 11,
+        "role": "filter-programs",
+        "referencePath": "stitch_roadmitere/explorează_universități_11/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/11.png",
+        "diffPath": ".tmp/phase5/diffs/android/11_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 12,
+        "role": "favorites-faculties",
+        "referencePath": "stitch_roadmitere/explorează_universități_12/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/12.png",
+        "diffPath": ".tmp/phase5/diffs/android/12_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      },
+      {
+        "platform": "android",
+        "screenId": 13,
+        "role": "favorites-empty",
+        "referencePath": "stitch_roadmitere/explorează_universități_13/screen.png",
+        "capturePath": ".tmp/phase5/captures/android/13.png",
+        "diffPath": ".tmp/phase5/diffs/android/13_diff.png",
+        "status": "pass",
+        "diffPercent": 0.0,
+        "thresholdPercent": 3.0,
+        "sizeMismatch": false,
+        "message": null
+      }
+    ],
+    "discrepancies": []
+  },
+  "dataIntegrity": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "screen_copy_alignment",
+        "status": "pass",
+        "details": "manifestIds=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], screenCopyIds=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]"
+      },
+      {
+        "id": "dataset_counts",
+        "status": "pass",
+        "details": "universities=3, faculties=12, programs=12, filters=3"
+      },
+      {
+        "id": "favorites_links",
+        "status": "pass",
+        "details": "all favorite entity links resolve"
+      },
+      {
+        "id": "filter_copy_labels",
+        "status": "pass",
+        "details": "all filter title/footer labels present"
+      },
+      {
+        "id": "placeholder_markers",
+        "status": "pass",
+        "details": "none found"
+      },
+      {
+        "id": "mojibake_scan",
+        "status": "pass",
+        "details": "none found"
+      }
+    ],
+    "discrepancies": []
+  },
+  "performance": {
+    "status": "pass",
+    "sourcePath": "docs/perf/real_data_current.json",
+    "platforms": {
+      "ios": {
+        "status": "pass",
+        "rows": [
+          {
+            "flow": "explore-tab-switch",
+            "status": "pass",
+            "avgFps": 58.4,
+            "p95FrameMs": 18.7,
+            "droppedFrames": 1,
+            "message": null
+          },
+          {
+            "flow": "detail-entry",
+            "status": "pass",
+            "avgFps": 57.2,
+            "p95FrameMs": 19.4,
+            "droppedFrames": 2,
+            "message": null
+          },
+          {
+            "flow": "filter-modal-transition",
+            "status": "pass",
+            "avgFps": 56.8,
+            "p95FrameMs": 19.8,
+            "droppedFrames": 2,
+            "message": null
+          },
+          {
+            "flow": "favorites-tab-switch",
+            "status": "pass",
+            "avgFps": 58.1,
+            "p95FrameMs": 18.9,
+            "droppedFrames": 1,
+            "message": null
+          }
+        ]
+      },
+      "android": {
+        "status": "pass",
+        "rows": [
+          {
+            "flow": "explore-tab-switch",
+            "status": "pass",
+            "avgFps": 57.0,
+            "p95FrameMs": 19.8,
+            "droppedFrames": 2,
+            "message": null
+          },
+          {
+            "flow": "detail-entry",
+            "status": "pass",
+            "avgFps": 55.9,
+            "p95FrameMs": 20.8,
+            "droppedFrames": 2,
+            "message": null
+          },
+          {
+            "flow": "filter-modal-transition",
+            "status": "pass",
+            "avgFps": 55.6,
+            "p95FrameMs": 21.0,
+            "droppedFrames": 3,
+            "message": null
+          },
+          {
+            "flow": "favorites-tab-switch",
+            "status": "pass",
+            "avgFps": 56.7,
+            "p95FrameMs": 20.1,
+            "droppedFrames": 2,
+            "message": null
+          }
+        ]
+      }
+    },
+    "discrepancies": []
+  },
+  "overlayPath": ".tmp/phase5/parity_overlay.html"
+}

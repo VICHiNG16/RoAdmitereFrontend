@@ -1,0 +1,55 @@
+name: Frontend Quality
+
+on:
+  pull_request:
+    paths:
+      - "app/**"
+      - "src/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - ".eslintrc.cjs"
+      - "jest.config.js"
+      - ".github/workflows/frontend-quality.yml"
+  workflow_dispatch:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit and component tests
+        run: npm test -- --runInBand
+
+      - name: Frontend guardrails
+        run: npm run guardrails:frontend
+
+      - name: Phase 5 QA parity/perf
+        run: python scripts/run_phase5_qa.py --performance-metrics docs/perf/real_data_current.json

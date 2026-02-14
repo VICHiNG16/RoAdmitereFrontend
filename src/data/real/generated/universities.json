@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "sourceRoot": "manual_scraping/merged/ase@custom_run_20260214T181911+ub@custom_run_20260214T114821+ugal@custom_run_20260214T190814+uoradea@custom_run_20260214T190904+upt@custom_run_20260214T201246+utcn@custom_run_20260214T201158+uvt@custom_run_20260214T201234",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 7,
+      "faculties": 102,
+      "programs": 1089,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "universities": [
+    {
+      "id": "university-academia-de-studii-economice-din-bucuresti",
+      "name": "Academia de Studii Economice din Bucuresti",
+      "city": "Bucuresti",
+      "facultyCountLabel": "24 Facultati",
+      "facultyCount": 24,
+      "logoAlt": "ASE Logo",
+      "logoUrl": "",
+      "description": "Date reale extrase din rularea manual scraping.",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://www.ase.ro/",
+      "isFavorite": false,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-de-vest",
+      "name": "Universitatea de Vest din Timisoara",
+      "city": "Timisoara",
+      "facultyCountLabel": "11 Facultati",
+      "facultyCount": 11,
+      "logoAlt": "UVT Logo",
+      "logoUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-wem7QdNnnUUGHac-qC6YYg6sXl5278E-FfUxddyWMhMXElGi0QO79zU1-ajNaghwCeSq6MDZ-GOu0YShjFz4kUbBoRb3vxlrFpnAmqdItGU-PPUztVQaDBRw_mOF06lsQF5Ot0fVixWeA8QlZJCfIDhHN87OxihXSX3fGXjIIS247_PnUs_HK29o3EY9QwWbMHZEu1rrewosBW4CTs8Wzc3pYkJK5FNrAYagQJfA-G1ISIIUvpgbkm2RgdmbZ3bPGsoka6ssQbk",
+      "description": "Date reale extrase din rularea manual scraping.",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.uvt.ro/",
+      "isFavorite": false,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-din-bucuresti",
+      "name": "Universitatea din Bucuresti",
+      "city": "Bucuresti",
+      "facultyCountLabel": "20 Facultati",
+      "facultyCount": 20,
+      "logoAlt": "Unibuc Logo",
+      "logoUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIJxtOagqPgO5yVx98F1sbiXDb98ug1IpAkaa4XHL1nnx3VcFUytiHKGCGX3W2skFXleg3w0nLrl2jBXTb-5ihVwZw3y_Gnws5gz_dWcn0urk_Ei0i1VZJ8wC1hSvBQSu77N6s6TqEUBqE2zZx91kTS1yKn1Mi9tVBiTKaGeTORojYY_wfObZoUv9Z2DhtP7uHh8OjnuMQLDY_5T-65BBiQjElSSGDqlkPJ7J-L5a98-kMMSUKbuHZ6RY8c_jLOU_-9qVqJeSws0U",
+      "description": "Date reale extrase din rularea manual scraping.",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/",
+      "isFavorite": false,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-din-oradea",
+      "name": "Universitatea din Oradea",
+      "city": "Oradea",
+      "facultyCountLabel": "15 Facultati",
+      "facultyCount": 15,
+      "logoAlt": "UOradea Logo",
+      "logoUrl": "",
+      "description": "Date reale extrase din rularea manual scraping.",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://www.uoradea.ro/",
+      "isFavorite": false,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-dunarea-de-jos-din-galati",
+      "name": "Universitatea Dunarea de Jos din Galati",
+      "city": "Galati",
+      "facultyCountLabel": "15 Facultati",
+      "facultyCount": 15,
+      "logoAlt": "UGAL Logo",
+      "logoUrl": "",
+      "description": "Date reale extrase din rularea manual scraping.",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/",
+      "isFavorite": false,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-politehnica-timisoara",
+      "name": "Universitatea Politehnica Timisoara",
+      "city": "Timisoara",
+      "facultyCountLabel": "10 Facultati",
+      "facultyCount": 10,
+      "logoAlt": "UPT Logo",
+      "logoUrl": "",
+      "description": "Date reale extrase din rularea manual scraping.",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/",
+      "isFavorite": false,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "id": "university-universitatea-tehnica-din-cluj-napoca",
+      "name": "Universitatea Tehnica din Cluj-Napoca",
+      "city": "Cluj-Napoca",
+      "facultyCountLabel": "7 Facultati",
+      "facultyCount": 7,
+      "logoAlt": "UTCN Logo",
+      "logoUrl": "",
+      "description": "Date reale extrase din rularea manual scraping.",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://www.utcluj.ro/",
+      "isFavorite": false,
+      "sourceScreens": [
+        1,
+        2,
+        9
+      ]
+    }
+  ]
+}

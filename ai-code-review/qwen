@@ -1,0 +1,165 @@
+I've reviewed your code thoroughly. Here are the key issues and improvements for better smoothness and performance:
+
+## 🚀 **Performance & Smoothness Issues**
+
+### 1. **Gesture Handler Optimization**
+```typescript
+// Current: Heavy logic in onUpdate/onEnd with multiple runOnJS calls
+// Problem: runOnJS is expensive and causes frame drops
+
+// Better approach:
+.onUpdate(({ translationX, velocityX }) => {
+  // Move more logic to the UI thread
+  const progress = Math.abs(translationX) / cardsViewportWidthValue.value;
+  pagerProgress.value = progress;
+  pillSwipeProgressValue.value = progress;
+  
+  // Only call runOnJS when absolutely necessary
+  if (swipeTargetIndexValue.value !== toIndex) {
+    // ... minimal setup
+  }
+})
+```
+
+### 2. **Unnecessary Re-renders**
+```typescript
+// Issue: renderCardsForTab has too many dependencies
+const renderCardsForTab = useCallback((tabKey: ExploreTabKey) => {
+  // This re-creates on every filter/search change
+}, [filteredFaculties, filteredPrograms, filteredUniversities, ...]); // ❌ Too many deps
+
+// Fix: Separate data filtering from rendering
+const renderCardsForTab = useCallback((items: any[], tabKey: ExploreTabKey) => {
+  // Render based on pre-filtered items passed as argument
+}, [isFavorite, router, toggleFavorite]); // ✅ Minimal deps
+```
+
+### 3. **Tab Height Jumps**
+```typescript
+// Current: No animation for height changes
+const transitionMinHeight = pagerTransition
+  ? Math.max(tabHeights[pagerTransition.from] ?? 0, tabHeights[pagerTransition.to] ?? 0)
+  : undefined;
+
+// Better: Animate the container height
+const containerHeight = useSharedValue(0);
+// Animate containerHeight when tab changes for smooth transitions
+```
+
+## 🎨 **Animation Improvements**
+
+### 4. **Pill Indicator Sync Issue**
+```typescript
+// Problem: indicatorLeft/indicatorWidth use JS timing, but swipePreview uses direct values
+// This causes desync between swipe gesture and pill animation
+
+// Fix: Drive pill indicator entirely from shared values
+const animatedIndicatorStyle = useAnimatedStyle(() => {
+  // Always use shared values, never mix with JS state
+  return {
+    left: hasSwipePreview ? interpolatedLeft : indicatorLeft.value,
+    width: pillWidth, // Keep constant during swipe
+  };
+});
+```
+
+### 5. **Filter Animation Missing**
+Your filters currently have **no animations** - cards just appear/disappear. Add:
+
+```typescript
+// In your card components or wrapper
+const opacity = useSharedValue(0);
+const scale = useSharedValue(0.95);
+
+useEffect(() => {
+  opacity.value = withTiming(1, { duration: 200 });
+  scale.value = withTiming(1, { duration: 200 });
+}, [filteredItems.length]); // Re-animate when filters change
+```
+
+## 🔧 **Code Quality Issues**
+
+### 6. **Type Import Spacing Bug**
+```typescript
+// ❌ Wrong (notice spaces before closing quotes):
+import type { Faculty } from "../../../src/data/mock/types ";
+import { CardFaculty } from "../../../src/components ";
+
+// ✅ Fix:
+import type { Faculty } from "../../../src/data/mock/types";
+import { CardFaculty } from "../../../src/components";
+```
+
+### 7. **String Literal Trailing Spaces**
+```typescript
+// ❌ These have trailing spaces:
+{ key: "universities ", label: "Universități " }
+
+// ✅ Remove them:
+{ key: "universities", label: "Universități" }
+```
+
+### 8. **Redundant State**
+```typescript
+// You have both:
+const [cardsViewportWidth, setCardsViewportWidth] = useState(0);
+const cardsViewportWidthValue = useSharedValue(0);
+
+// And they're kept in sync manually. Use only the shared value:
+const cardsViewportWidth = useSharedValue(0);
+```
+
+## 💡 **Critical Recommendations**
+
+### 9. **Use FlatList for Virtualization**
+```typescript
+// Instead of .map() for potentially long lists:
+<FlatList
+  data={filteredUniversities}
+  renderItem={({ item }) => <CardUniversity {...item} />}
+  keyExtractor={(item) => item.id}
+  ItemSeparatorComponent={() => <View style={{ height: theme.layout.sectionGap }} />}
+  contentContainerStyle={{ paddingBottom: TAB_BAR_SAFE_PADDING }}
+/>
+```
+
+### 10. **Memoize Card Components**
+```typescript
+// Wrap your card components:
+export const CardUniversity = React.memo(({ ...props }) => {
+  // ... component code
+});
+```
+
+### 11. **Optimize Swipe Thresholds**
+```typescript
+// Current values might be too aggressive:
+const SWIPE_COMMIT_VELOCITY_THRESHOLD = 760; // Try 400-500
+const SWIPE_COMMIT_PROGRESS_THRESHOLD = 0.3; // Try 0.25
+
+// Test on real devices and adjust
+```
+
+### 12. **Add Loading/Empty States**
+```typescript
+{filteredUniversities.length === 0 ? (
+  <Text style={styles.emptyState}>
+    {searchQuery ? "Nimic găsit" : "Toate universitățile sunt afișate"}
+  </Text>
+) : (
+  // render cards
+)}
+```
+
+## 📊 **Summary of Priority Fixes**
+
+| Priority | Issue | Impact |
+|----------|-------|--------|
+| 🔴 HIGH | Gesture handler `runOnJS` calls | Major smoothness issue |
+| 🔴 HIGH | No FlatList virtualization | Performance on large datasets |
+| 🟡 MEDIUM | Tab height jumps | User experience |
+| 🟡 MEDIUM | Filter animations missing | Polish |
+| 🟢 LOW | Type import spacing | Code quality |
+| 🟢 LOW | Redundant state | Maintainability |
+
+Would you like me to provide the complete refactored code for any specific section?

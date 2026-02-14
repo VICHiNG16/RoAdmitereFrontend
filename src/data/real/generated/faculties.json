@@ -1,0 +1,1750 @@
+{
+  "meta": {
+    "sourceRoot": "manual_scraping/merged/ase@custom_run_20260214T181911+ub@custom_run_20260214T114821+ugal@custom_run_20260214T190814+uoradea@custom_run_20260214T190904+upt@custom_run_20260214T201246+utcn@custom_run_20260214T201158+uvt@custom_run_20260214T201234",
+    "screenCount": 13,
+    "deterministicOrder": "entity lists sorted by id; screen lists sorted by screenId",
+    "counts": {
+      "universities": 7,
+      "faculties": 102,
+      "programs": 1089,
+      "filterScreens": 3,
+      "favoriteCollections": 3
+    }
+  },
+  "faculties": [
+    {
+      "id": "faculty-facultate-necunoscuta-ase",
+      "name": "Facultate Necunoscuta",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "4 Programe",
+      "programCount": 4,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://admitere.ase.ro/licenta-2026/info-admitere/Oferta_locuri_propuse_2026_2027_IF.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-administrarea-afacerilor-cu-predare-in-limbi-straine-ase",
+      "name": "Facultatea Administrarea Afacerilor, cu predare în limbi străine",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "11 Programe",
+      "programCount": 11,
+      "icon": "account-balance",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-administratie-si-management-public-ase",
+      "name": "Facultatea Administrație și Management Public",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "account-balance",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-bucharest-business-school-ase",
+      "name": "Facultatea Bucharest Business School",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "4 Programe",
+      "programCount": 4,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-business-si-turism-ase",
+      "name": "Facultatea Business și Turism",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-cibernetica-statistica-si-informatica-economica-ase",
+      "name": "Facultatea Cibernetică, Statistică și Informatică Economică",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "9 Programe",
+      "programCount": 9,
+      "icon": "code",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-contabilitate-si-informatica-de-gestiune-ase",
+      "name": "Facultatea Contabilitate și Informatică de Gestiune",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "code",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-administratie-si-afaceri-ub",
+      "name": "Facultatea de Administrație și Afaceri",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Științe administrative",
+      "programCountLabel": "24 Programe",
+      "programCount": 24,
+      "icon": "account-balance",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-arhitectura-navala-ugal",
+      "name": "Facultatea de Arhitectură Navală",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Arhitectură navală",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_master_cf._HG_644_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-arhitectura-si-urbanism-upt",
+      "name": "Facultatea de Arhitectura si Urbanism",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "4 Programe",
+      "programCount": 4,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/licenta/facultati-si-domenii/facultatea-de-arhitectura-si-urbanism/arhitectura-6-ani-ro",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-arte-si-design-uvt",
+      "name": "Facultatea de Arte si Design",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Arte vizuale",
+      "programCountLabel": "18 Programe",
+      "programCount": 18,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-arte-ugal",
+      "name": "Facultatea de Arte",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Arte vizuale",
+      "programCountLabel": "6 Programe",
+      "programCount": 6,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_master_cf._HG_644_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-arte-uoradea",
+      "name": "Facultatea de Arte",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Arte vizuale",
+      "programCountLabel": "12 Programe",
+      "programCount": 12,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-automatica-calculatoare-inginerie-electrica-si-electronica-ugal",
+      "name": "Facultatea de Automatică, Calculatoare, Inginerie Electrică și Electronică",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Inginerie electrică",
+      "programCountLabel": "13 Programe",
+      "programCount": 13,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_master_cf._HG_644_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-automatica-si-calculatoare-upt",
+      "name": "Facultatea de Automatica si Calculatoare",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "17 Programe",
+      "programCount": 17,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/masterat/facultati-si-programe/facultatea-de-automatica-si-calculatoare/ingineria-sistemelor-automate-ro",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-automatica-si-calculatoare-utcn",
+      "name": "Facultatea de Automatică și Calculatoare",
+      "universityName": "Universitatea Tehnica din Cluj-Napoca",
+      "domain": "CALCULATOARE ȘI TEHNOLOGIA INFORMAȚIEI",
+      "programCountLabel": "18 Programe",
+      "programCount": 18,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://admitereonline.utcluj.ro/facultatea-de-automatica-si-calculatoare-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-autovehicule-rutiere-mecatronica-si-mecanica-utcn",
+      "name": "Facultatea de Autovehicule Rutiere, Mecatronică și Mecanică",
+      "universityName": "Universitatea Tehnica din Cluj-Napoca",
+      "domain": "Inginerie Mecanică",
+      "programCountLabel": "9 Programe",
+      "programCount": 9,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://admitereonline.utcluj.ro/facultatea-de-autovehicule-rutiere-mecatronica-si-mecanica-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-biologie-ub",
+      "name": "Facultatea de Biologie",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Biologie",
+      "programCountLabel": "19 Programe",
+      "programCount": 19,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-business-si-turism-ase",
+      "name": "Facultatea de Business și Turism",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "2 Programe",
+      "programCount": 2,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-chimie-biologie-geografie-uvt",
+      "name": "Facultatea de Chimie, Biologie, Geografie",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Geografie",
+      "programCountLabel": "17 Programe",
+      "programCount": 17,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-chimie-ub",
+      "name": "Facultatea de Chimie",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Chimie",
+      "programCountLabel": "7 Programe",
+      "programCount": 7,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-cibernetica-statistica-si-informatica-economica-ase",
+      "name": "Facultatea de Cibernetică, Statistică și Informatică Economică",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "4 Programe",
+      "programCount": 4,
+      "icon": "code",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-constructii-cadastru-si-arhitectura-uoradea",
+      "name": "Facultatea de Construcții, Cadastru și Arhitectură",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Inginerie civilă",
+      "programCountLabel": "6 Programe",
+      "programCount": 6,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/masterat/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-constructii-upt",
+      "name": "Facultatea de Constructii",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "13 Programe",
+      "programCount": 13,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/licenta/facultati-si-domenii/facultatea-de-constructii/inginerie-civila-4-ani-ro",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-constructii-utcn",
+      "name": "Facultatea de Construcții",
+      "universityName": "Universitatea Tehnica din Cluj-Napoca",
+      "domain": "Inginerie Civilă",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://admitereonline.utcluj.ro/facultatea-de-constructii-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-contabilitate-si-informatica-de-gestiune-ase",
+      "name": "Facultatea de Contabilitate și Informatică de Gestiune",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "2 Programe",
+      "programCount": 2,
+      "icon": "code",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-drept-ase",
+      "name": "Facultatea de Drept",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "1 Programe",
+      "programCount": 1,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-drept-si-stiinte-administrative-ugal",
+      "name": "Facultatea de Drept și Științe Administrative",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Drept",
+      "programCountLabel": "10 Programe",
+      "programCount": 10,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-drept-ub",
+      "name": "Facultatea de Drept",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Drept",
+      "programCountLabel": "16 Programe",
+      "programCount": 16,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-drept-uoradea",
+      "name": "Facultatea de Drept",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Drept",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-drept-uvt",
+      "name": "Facultatea de Drept",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Drept",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-economie-agroalimentara-si-a-mediului-ase",
+      "name": "Facultatea de Economie Agroalimentară și a Mediului",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "2 Programe",
+      "programCount": 2,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-economie-si-administrarea-afacerilor-ugal",
+      "name": "Facultatea de Economie și Administrarea Afacerilor",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Administrarea afacerilor",
+      "programCountLabel": "16 Programe",
+      "programCount": 16,
+      "icon": "account-balance",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-economie-si-comunicare-in-afaceri-ase",
+      "name": "Facultatea de Economie și Comunicare în Afaceri",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "1 Programe",
+      "programCount": 1,
+      "icon": "analytics",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-economie-si-de-administrare-a-afacerilor-uvt",
+      "name": "Facultatea de Economie și de Administrare a Afacerilor",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Management",
+      "programCountLabel": "31 Programe",
+      "programCount": 31,
+      "icon": "account-balance",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-educatie-fizica-si-sport-ugal",
+      "name": "Facultatea de Educație Fizică și Sport",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Educație fizică și sport",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-educatie-fizica-si-sport-uvt",
+      "name": "Facultatea de Educație Fizică și Sport",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Știința sportului și educației fizice",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-electronica-telecomunicatii-si-tehnologia-informatiei-utcn",
+      "name": "Facultatea de Electronică, Telecomunicații și Tehnologia Informației",
+      "universityName": "Universitatea Tehnica din Cluj-Napoca",
+      "domain": "Inginerie Electronică, Telecomunicații și Tehnologii Informaționale",
+      "programCountLabel": "6 Programe",
+      "programCount": 6,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://admitereonline.utcluj.ro/facultatea-de-electronica-telecomunicatii-si-tehnologia-informatiei-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-electronica-telecomunicatii-si-tehnologii-informationale-upt",
+      "name": "Facultatea de Electronica Telecomunicatii si Tehnologii Informationale",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "9 Programe",
+      "programCount": 9,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/licenta/facultati-si-domenii/facultatea-de-electronica-telecomunicatii-si-tehnologii-informationale/inginerie-electronica-telecomunicatii-si-tehnologii-informationale-4-ani-ro-en",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-filosofie-ub",
+      "name": "Facultatea de Filosofie",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Filosofie",
+      "programCountLabel": "13 Programe",
+      "programCount": 13,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-finante-asigurari-banci-si-burse-de-valori-ase",
+      "name": "Facultatea de Finanțe, Asigurări, Bănci și Burse de Valori",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "3 Programe",
+      "programCount": 3,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-fizica-ub",
+      "name": "Facultatea de Fizică",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Fizică",
+      "programCountLabel": "14 Programe",
+      "programCount": 14,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-fizica-uvt",
+      "name": "Facultatea de Fizică",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Fizică",
+      "programCountLabel": "6 Programe",
+      "programCount": 6,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-geografie-turism-si-sport-uoradea",
+      "name": "Facultatea de Geografie, Turism și Sport",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Geografie",
+      "programCountLabel": "11 Programe",
+      "programCount": 11,
+      "icon": "public",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-geografie-ub",
+      "name": "Facultatea de Geografie",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Geografie",
+      "programCountLabel": "24 Programe",
+      "programCount": 24,
+      "icon": "public",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-geologie-si-geofizica-ub",
+      "name": "Facultatea de Geologie și Geofizică",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Inginerie Geologică",
+      "programCountLabel": "7 Programe",
+      "programCount": 7,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-informatica-si-stiinte-uoradea",
+      "name": "Facultatea de Informatică și Științe",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Informatică",
+      "programCountLabel": "10 Programe",
+      "programCount": 10,
+      "icon": "code",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/masterat/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-ingineria-materialelor-si-a-mediului-utcn",
+      "name": "Facultatea de Ingineria Materialelor și a Mediului",
+      "universityName": "Universitatea Tehnica din Cluj-Napoca",
+      "domain": "Ingineria Materialelor",
+      "programCountLabel": "3 Programe",
+      "programCount": 3,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://admitereonline.utcluj.ro/facultatea-de-ingineria-materialelor-si-a-mediului-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-a-instalatiilor-utcn",
+      "name": "Facultatea de Inginerie a Instalațiilor",
+      "universityName": "Universitatea Tehnica din Cluj-Napoca",
+      "domain": "Ingineria Instalațiilor",
+      "programCountLabel": "1 Programe",
+      "programCount": 1,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://admitereonline.utcluj.ro/facultatea-de-inginerie-a-instalatiilor-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-chimica-biotehnologii-si-protectia-mediului-upt",
+      "name": "Facultatea de Inginerie Chimica Biotehnologii si Protectia Mediului",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/licenta/facultati-si-domenii/facultatea-de-inginerie-chimica-biotehnologii-si-protectia-mediului/ingineria-produselor-alimentare-4-ani-ro",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-din-hunedoara-upt",
+      "name": "Facultatea de Inginerie din Hunedoara",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/masterat/facultati-si-programe/facultatea-de-inginerie-din-hunedoara/tehnici-informatice-in-ingineria-electrica-ro",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-electrica-si-energetica-upt",
+      "name": "Facultatea de Inginerie Electrica si Energetica",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/masterat/facultati-si-programe/facultatea-de-inginerie-electrica-si-energetica/sisteme-inteligente-in-inginerie-electrica-ro",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-electrica-si-tehnologia-informatiei-uoradea",
+      "name": "Facultatea de Inginerie Electrică și Tehnologia Informației",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Inginerie electrică",
+      "programCountLabel": "15 Programe",
+      "programCount": 15,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-electrica-utcn",
+      "name": "Facultatea de Inginerie Electrică",
+      "universityName": "Universitatea Tehnica din Cluj-Napoca",
+      "domain": "Inginerie Electrică",
+      "programCountLabel": "9 Programe",
+      "programCount": 9,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Cluj-Napoca, Romania",
+      "officialUrl": "https://admitereonline.utcluj.ro/facultatea-de-inginerie-electrica-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-energetica-si-management-industrial-uoradea",
+      "name": "Facultatea de Inginerie Energetică și Management Industrial",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Inginerie energetică",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-manageriala-si-tehnologica-uoradea",
+      "name": "Facultatea de Inginerie Managerială și Tehnologică",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Mecatronică și robotică",
+      "programCountLabel": "11 Programe",
+      "programCount": 11,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/masterat/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-si-agronomie-din-braila-ugal",
+      "name": "Facultatea de Inginerie și Agronomie din Brăila",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Inginerie mecanică",
+      "programCountLabel": "10 Programe",
+      "programCount": 10,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-inginerie-ugal",
+      "name": "Facultatea de Inginerie",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Inginerie industrială",
+      "programCountLabel": "23 Programe",
+      "programCount": 23,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-istorie-filosofie-si-teologie-ugal",
+      "name": "Facultatea de Istorie, Filosofie și Teologie",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Sociologie",
+      "programCountLabel": "10 Programe",
+      "programCount": 10,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-istorie-relatii-internationale-stiinte-politice-si-stiintele-comunicarii-uoradea",
+      "name": "Facultatea de Istorie, Relații Internaționale, Științe Politice și Științele Comunicării",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Relații internaționale și studii europene",
+      "programCountLabel": "11 Programe",
+      "programCount": 11,
+      "icon": "history_edu",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/masterat/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-istorie-ub",
+      "name": "Facultatea de Istorie",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Istorie",
+      "programCountLabel": "21 Programe",
+      "programCount": 21,
+      "icon": "history_edu",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-jurnalism-si-stiintele-comunicarii-ub",
+      "name": "Facultatea de Jurnalism și Științele Comunicării",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Științe ale comunicării",
+      "programCountLabel": "16 Programe",
+      "programCount": 16,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-limbi-si-literaturi-straine-ub",
+      "name": "Facultatea de Limbi și Literaturi Străine",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Limbă și literatură",
+      "programCountLabel": "34 Programe",
+      "programCount": 34,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-litere-istorie-filosofie-si-teologie-uvt",
+      "name": "Facultatea de Litere, Istorie, Filosofie și Teologie",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Limbă și literatură",
+      "programCountLabel": "18 Programe",
+      "programCount": 18,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-litere-ub",
+      "name": "Facultatea de Litere",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Studii culturale",
+      "programCountLabel": "22 Programe",
+      "programCount": 22,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-litere-ugal",
+      "name": "Facultatea de Litere",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Limbă și literatură",
+      "programCountLabel": "11 Programe",
+      "programCount": 11,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-litere-uoradea",
+      "name": "Facultatea de Litere",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Limbă și literatură",
+      "programCountLabel": "7 Programe",
+      "programCount": 7,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-management-ase",
+      "name": "Facultatea de Management",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "4 Programe",
+      "programCount": 4,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-management-in-productie-si-transporturi-upt",
+      "name": "Facultatea de Management In Productie si Transporturi",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "7 Programe",
+      "programCount": 7,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/masterat/facultati-si-programe/facultatea-de-management-in-productie-si-transporturi/quality-and-competitiveness-engineering-and-management-en",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-marketing-ase",
+      "name": "Facultatea de Marketing",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "2 Programe",
+      "programCount": 2,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-matematica-si-informatica-ub",
+      "name": "Facultatea de Matematică și Informatică",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Informatică",
+      "programCountLabel": "21 Programe",
+      "programCount": 21,
+      "icon": "code",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-matematica-si-informatica-uvt",
+      "name": "Facultatea de Matematică și Informatică",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Informatică",
+      "programCountLabel": "13 Programe",
+      "programCount": 13,
+      "icon": "code",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-mecanica-upt",
+      "name": "Facultatea de Mecanica",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "24 Programe",
+      "programCount": 24,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/licenta/facultati-si-domenii/facultatea-de-mecanica/robotica-invatamant-dual-4-ani-ro",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-medicina-si-farmacie-ugal",
+      "name": "Facultatea de Medicină și Farmacie",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Sănătate",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-medicina-si-farmacie-uoradea",
+      "name": "Facultatea de Medicină și Farmacie",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Sănătate",
+      "programCountLabel": "12 Programe",
+      "programCount": 12,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/masterat/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-muzica-si-teatru-uvt",
+      "name": "Facultatea de Muzică și Teatru",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Muzică",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-protectia-mediului-uoradea",
+      "name": "Facultatea de Protecția Mediului",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Ingineria produselor alimentare",
+      "programCountLabel": "18 Programe",
+      "programCount": 18,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/masterat/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-psihologie-si-stiintele-educatiei-ub",
+      "name": "Facultatea de Psihologie și Științele Educației",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Psihologie",
+      "programCountLabel": "35 Programe",
+      "programCount": 35,
+      "icon": "psychology",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-relatii-economice-internationale-ase",
+      "name": "Facultatea de Relații Economice Internaționale",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "3 Programe",
+      "programCount": 3,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-sociologie-si-asistenta-sociala-ub",
+      "name": "Facultatea de Sociologie și Asistență Socială",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Sociologie",
+      "programCountLabel": "21 Programe",
+      "programCount": 21,
+      "icon": "psychology",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-sociologie-si-psihologie-uvt",
+      "name": "Facultatea de Sociologie și Psihologie",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Științe ale educației",
+      "programCountLabel": "19 Programe",
+      "programCount": 19,
+      "icon": "psychology",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinta-si-ingineria-alimentelor-ugal",
+      "name": "Facultatea de Știința și Ingineria Alimentelor",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Ingineria produselor alimentare",
+      "programCountLabel": "16 Programe",
+      "programCount": 16,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_master_cf._HG_644_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinte-ale-comunicarii-upt",
+      "name": "Facultatea de Stiinte Ale Comunicarii",
+      "universityName": "Universitatea Politehnica Timisoara",
+      "domain": "",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://www.upt.ro/educatie/oferta-de-studii/licenta/facultati-si-domenii/facultatea-de-stiinte-ale-comunicarii/romanian-language-preparatory-year-for-international-students-1-year-en",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinte-ale-educatiei-ugal",
+      "name": "Facultatea de Științe ale Educației",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Științe ale educației",
+      "programCountLabel": "3 Programe",
+      "programCount": 3,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinte-ale-guvernarii-si-comunicarii-uvt",
+      "name": "Facultatea de Științe ale Guvernării și Comunicării",
+      "universityName": "Universitatea de Vest din Timisoara",
+      "domain": "Științe ale comunicării",
+      "programCountLabel": "12 Programe",
+      "programCount": 12,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Timisoara, Romania",
+      "officialUrl": "https://admitere.uvt.ro/procesul-de-admitere/locuri-disponibile",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinte-economice-uoradea",
+      "name": "Facultatea de Științe Economice",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Economie și afaceri internaționale",
+      "programCountLabel": "19 Programe",
+      "programCount": 19,
+      "icon": "analytics",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinte-politice-ub",
+      "name": "Facultatea de Științe Politice",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Științe Politice",
+      "programCountLabel": "13 Programe",
+      "programCount": 13,
+      "icon": "analytics",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinte-si-mediu-ugal",
+      "name": "Facultatea de Științe și Mediu",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Chimie",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "biotech",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-stiinte-socio-umane-uoradea",
+      "name": "Facultatea de Științe Socio-Umane",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Științe ale educației",
+      "programCountLabel": "14 Programe",
+      "programCount": 14,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/masterat/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-studii-interdisciplinare-ub",
+      "name": "Facultatea de Studii Interdisciplinare",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Științe administrative",
+      "programCountLabel": "1 Programe",
+      "programCount": 1,
+      "icon": "account-balance",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/licenta",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-teologie-baptista-ub",
+      "name": "Facultatea de Teologie Baptistă",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Teologie",
+      "programCountLabel": "2 Programe",
+      "programCount": 2,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-teologie-ortodoxa-episcop-dr-vasile-coman-uoradea",
+      "name": "Facultatea de Teologie Ortodoxă \"Episcop Dr. Vasile Coman\"",
+      "universityName": "Universitatea din Oradea",
+      "domain": "Teologie",
+      "programCountLabel": "3 Programe",
+      "programCount": 3,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Oradea, Romania",
+      "officialUrl": "https://admitere.uoradea.ro/ro/licenta/lista-specializarilor",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-teologie-ortodoxa-justinian-patriarhul-ub",
+      "name": "Facultatea de Teologie Ortodoxă „Justinian Patriarhul”",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Teologie",
+      "programCountLabel": "15 Programe",
+      "programCount": 15,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-de-teologie-romano-catolica-ub",
+      "name": "Facultatea de Teologie Romano-Catolică",
+      "universityName": "Universitatea din Bucuresti",
+      "domain": "Teologie",
+      "programCountLabel": "5 Programe",
+      "programCount": 5,
+      "icon": "menu-book",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://unibuc.ro/studii/programe-de-studii/master",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-drept-ase",
+      "name": "Facultatea Drept",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "2 Programe",
+      "programCount": 2,
+      "icon": "gavel",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-economia-agroalimentara-si-a-mediului-ase",
+      "name": "Facultatea Economia Agroalimentară și a Mediului",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "3 Programe",
+      "programCount": 3,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-economie-si-comunicare-in-afaceri-ase",
+      "name": "Facultatea Economie și Comunicare în Afaceri",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "3 Programe",
+      "programCount": 3,
+      "icon": "analytics",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-finante-asigurari-banci-si-burse-de-valori-ase",
+      "name": "Facultatea Finanțe, Asigurări, Bănci și Burse de Valori",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-management-ase",
+      "name": "Facultatea Management",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "10 Programe",
+      "programCount": 10,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-marketing-ase",
+      "name": "Facultatea Marketing",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "7 Programe",
+      "programCount": 7,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-relatii-economice-internationale-ase",
+      "name": "Facultatea Relații Economice Internaționale",
+      "universityName": "Academia de Studii Economice din Bucuresti",
+      "domain": "",
+      "programCountLabel": "8 Programe",
+      "programCount": 8,
+      "icon": "school",
+      "description": "",
+      "locationLabel": "Bucuresti, Romania",
+      "officialUrl": "https://ase.ro/universitatea/academic/programe-academice/programe-de-masterat",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "faculty-facultatea-transfrontaliera-ugal",
+      "name": "Facultatea Transfrontalieră",
+      "universityName": "Universitatea Dunarea de Jos din Galati",
+      "domain": "Economie și afaceri internaționale",
+      "programCountLabel": "27 Programe",
+      "programCount": 27,
+      "icon": "analytics",
+      "description": "",
+      "locationLabel": "Galati, Romania",
+      "officialUrl": "https://www.ugal.ro/files/studenti/2025/programele_de_licenta_cf._HG_645_2025_pt._site.pdf",
+      "isFavorite": false,
+      "sourceScreens": [
+        3,
+        4
+      ]
+    }
+  ]
+}
